@@ -10,24 +10,28 @@ const storyPanels = [
     text: "Amandeep Singh is redefining global sports ecosystems by building scalable, high-value platforms across sport, entertainment, and culture.",
     accent: "#FFD700",
     number: "01",
+    bg: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=1600&q=80", // stadium crowd
   },
   {
     title: "THE BUILDER",
     text: "Founder of Game Changers FZCO, he has rapidly created one of the fastest-growing sports ecosystems since 2024.",
     accent: "#FF4D4D",
     number: "02",
+    bg: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=80", // construction/blueprint
   },
   {
     title: "THE EXECUTION",
     text: "From championship-winning teams to multi-sport IPs, his execution-driven mindset sets him apart on the global stage.",
     accent: "#00CFFF",
     number: "03",
+    bg: "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=1600&q=80", // athlete in motion
   },
   {
     title: "BEYOND SPORTS",
     text: "With ventures in music, entertainment, hospitality, and film, he operates at the intersection of culture and commerce.",
     accent: "#A8FF78",
     number: "04",
+    bg: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1600&q=80", // concert/entertainment
   },
 ];
 
@@ -366,6 +370,19 @@ export default function AboutUs() {
               className="panel relative flex items-center justify-center"
               style={{ width: "100vw", height: "100vh", overflow: "hidden" }}
             >
+
+              {/* Panel background image */}
+              <div style={{
+                position: "absolute",
+                inset: 0,
+                backgroundImage: `url(${sec.bg})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                opacity: 0.08,
+                filter: "grayscale(100%)",
+                pointerEvents: "none",
+              }} />
+
               {/* Subtle diagonal background rule */}
               <div style={{
                 position: "absolute",
@@ -406,11 +423,11 @@ export default function AboutUs() {
                   className="panel-title"
                   style={{
                     fontSize: "clamp(2.8rem, 7vw, 6.5rem)",
-                    fontWeight: 900,
+                    fontWeight: 800,
                     fontStyle: "italic",
                     textTransform: "uppercase",
                     lineHeight: 0.9,
-                    letterSpacing: "-0.02em",
+                    letterSpacing: "0.2em",
                     marginBottom: 32,
                     color: "rgba(255,255,255,0.95)",
                     opacity: 0,
@@ -426,6 +443,7 @@ export default function AboutUs() {
                     fontSize: "clamp(1rem, 1.5vw, 1.25rem)",
                     color: "rgba(255,255,255,0.5)",
                     lineHeight: 1.75,
+                    letterSpacing: "0.04em",
                     fontWeight: 300,
                     maxWidth: 480,
                     opacity: 0,
