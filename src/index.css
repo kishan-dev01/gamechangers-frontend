@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-brand-midnight text-brand-kinetic font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight text-brand-kinetic font-bold uppercase italic;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-brand-slate/80 backdrop-blur-md border border-brand-gold/30;
+  }
+  .neon-glow {
+    filter: drop-shadow(0 0 12px theme('colors.brand.neon'));
+  }
+  .neon-text-glow {
+    text-shadow: 0 0 12px theme('colors.brand.neon');
+  }
+  .neon-hover-glow:hover {
+    box-shadow: 0 0 15px theme('colors.brand.neon');
+  }
+  .slash-divider-top {
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+  }
+  .slash-divider-bottom {
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+  }
+  .slash-divider-both {
+    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+  }
+}
+
+/* Smooth scrolling for the whole page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hides scrollbar for clean aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
