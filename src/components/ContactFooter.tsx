@@ -1,144 +1,194 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Mail, ArrowRight } from 'lucide-react';
 
-const FacebookIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-);
+export default function Contact() {
+  const [formState, setFormState] = useState('idle'); // idle, submitting, success
 
-const LinkedinIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFormState('submitting');
+    // Simulate API call
+    setTimeout(() => {
+      setFormState('success');
+      // Reset form after a few seconds
+      setTimeout(() => setFormState('idle'), 3000);
+    }, 1500);
+  };
 
-const InstagramIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-);
-
-export default function ContactFooter() {
   return (
-    <footer id="contact" className="bg-brand-kinetic text-brand-midnight relative z-0">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 py-24 md:py-32 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
-        
-        {/* Left Column - Contact Info & Socials */}
-        <div className="space-y-12">
+    <section id="contact" className="py-24 md:py-32 bg-white relative overflow-hidden z-10">
+
+      {/* Structural Sports Grid Background */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none flex justify-center">
+        <div className="w-full max-w-[1800px] grid grid-cols-4 h-full">
+          <div className="border-r border-gray-900 h-full" />
+          <div className="border-r border-gray-900 h-full" />
+          <div className="border-r border-gray-900 h-full" />
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+
+          {/* Left Column: Branding & Info */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="flex flex-col justify-between"
+          >
+            <div>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-2 h-2 bg-brand-gold rotate-45" />
+                <span className="text-brand-gold font-bold uppercase tracking-[0.25em] text-xs">
+                  Connect With Us
+                </span>
+              </div>
+              <h2 className="text-5xl md:text-7xl font-display font-bold italic uppercase text-gray-900 tracking-tighter leading-none mb-6">
+                Step Into <br />
+                <span className="text-brand-gold">The Arena</span>
+              </h2>
+              <p className="text-gray-500 text-sm md:text-base font-medium max-w-md leading-relaxed">
+                Whether you're looking for partnership opportunities, media inquiries, or general information, our team is ready to assist. Drop us a line and let's make it happen.
+              </p>
+            </div>
+
+            {/* Contact Details */}
+            <div className="mt-12 space-y-8">
+              <div>
+                <span className="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
+                  General Inquiries
+                </span>
+                <a href="mailto:hello@gamechangers.com" className="text-xl font-display font-bold italic text-gray-900 hover:text-brand-gold transition-colors">
+                  hello@gamechangers.com
+                </a>
+              </div>
+              <div>
+                <span className="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
+                  Headquarters
+                </span>
+                <address className="not-italic text-gray-600 font-medium">
+                  124 Sports Avenue, Suite 400<br />
+                  Dubai, United Arab Emirates
+                </address>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Right Column: The Form */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="space-y-6"
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="bg-white"
           >
-            <h2 className="text-4xl md:text-6xl font-display font-bold italic uppercase tracking-tighter">
-              Get in touch
-            </h2>
-            <p className="text-xl text-brand-midnight/80 font-medium max-w-md">
-              We’d love to hear from you. Reach out to explore partnerships or learn more about our global sporting legacy.
-            </p>
+            <form onSubmit={handleSubmit} className="space-y-6">
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* First Name */}
+                <div className="relative group">
+                  <label htmlFor="firstName" className="sr-only">First Name</label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    required
+                    placeholder="First Name *"
+                    className="w-full bg-gray-50 border-b-2 border-gray-200 px-4 py-4 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-brand-gold transition-colors duration-300"
+                  />
+                </div>
+
+                {/* Last Name */}
+                <div className="relative group">
+                  <label htmlFor="lastName" className="sr-only">Last Name</label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    required
+                    placeholder="Last Name *"
+                    className="w-full bg-gray-50 border-b-2 border-gray-200 px-4 py-4 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-brand-gold transition-colors duration-300"
+                  />
+                </div>
+              </div>
+
+              {/* Email */}
+              <div className="relative group">
+                <label htmlFor="email" className="sr-only">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  required
+                  placeholder="Email Address *"
+                  className="w-full bg-gray-50 border-b-2 border-gray-200 px-4 py-4 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-brand-gold transition-colors duration-300"
+                />
+              </div>
+
+              {/* Subject */}
+              <div className="relative group">
+                <label htmlFor="subject" className="sr-only">Subject</label>
+                <div className="relative">
+                  <select
+                    id="subject"
+                    required
+                    className="w-full bg-gray-50 border-b-2 border-gray-200 px-4 py-4 text-gray-900 focus:outline-none focus:border-brand-gold transition-colors duration-300 appearance-none cursor-pointer"
+                  >
+                    <option value="" disabled selected>Select a Subject *</option>
+                    <option value="partnership">Partnership & Sponsorship</option>
+                    <option value="media">Media Inquiry</option>
+                    <option value="support">General Support</option>
+                  </select>
+                  {/* Custom Dropdown Arrow */}
+                  <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
+                    <svg className="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              {/* Message */}
+              <div className="relative group">
+                <label htmlFor="message" className="sr-only">Message</label>
+                <textarea
+                  id="message"
+                  required
+                  rows="4"
+                  placeholder="Your Message *"
+                  className="w-full bg-gray-50 border-b-2 border-gray-200 px-4 py-4 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-brand-gold transition-colors duration-300 resize-none"
+                ></textarea>
+              </div>
+
+              {/* Submit Button */}
+              <button
+                type="submit"
+                disabled={formState !== 'idle'}
+                className="w-full md:w-auto bg-gray-900 hover:bg-brand-gold text-white px-10 py-5 font-display font-bold italic uppercase tracking-widest text-sm transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-3 group"
+              >
+                {formState === 'idle' && (
+                  <>
+                    Send Message
+                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </>
+                )}
+                {formState === 'submitting' && (
+                  <span className="flex items-center gap-2">
+                    <svg className="animate-spin h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Sending...
+                  </span>
+                )}
+                {formState === 'success' && 'Message Sent!'}
+              </button>
+            </form>
           </motion.div>
 
-          <div className="space-y-6">
-            <div className="flex items-start gap-4">
-              <div className="glass-card p-3 rounded-none">
-                <Mail className="text-brand-neon w-6 h-6" />
-              </div>
-              <div>
-                <span className="block text-sm uppercase tracking-widest text-brand-slate font-bold mb-1">Email</span>
-                <a href="mailto:Info@gamechangersfzco.com" className="hover:text-brand-neon hover:neon-text-glow transition-all font-medium">
-                  Info@gamechangersfzco.com
-                </a>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="glass-card p-3 rounded-none">
-                <MapPin className="text-brand-neon w-6 h-6" />
-              </div>
-              <div>
-                <span className="block text-sm uppercase tracking-widest text-brand-slate font-bold mb-1">Address</span>
-                <address className="not-italic hover:text-brand-neon hover:neon-text-glow transition-all font-medium text-brand-midnight/80">
-                  Office 43-44, Municipality Building,<br />
-                  Al Fahidi, Bur Dubai, 12345, Dubai
-                </address>
-              </div>
-            </div>
-          </div>
-
-          <div className="pt-8 border-t border-brand-midnight/10 flex gap-6">
-            <a href="#" className="p-3 bg-brand-midnight/5 hover:bg-brand-gold hover:text-brand-midnight hover:neon-hover-glow transition-all">
-              <FacebookIcon />
-            </a>
-            <a href="#" className="p-3 bg-brand-midnight/5 hover:bg-brand-gold hover:text-brand-midnight hover:neon-hover-glow transition-all">
-              <LinkedinIcon />
-            </a>
-            <a href="#" className="p-3 bg-brand-midnight/5 hover:bg-brand-gold hover:text-brand-midnight hover:neon-hover-glow transition-all">
-              <InstagramIcon />
-            </a>
-          </div>
         </div>
-
-        {/* Right Column - Contact Form */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          className="glass-card text-brand-midnight p-8 md:p-12 shadow-2xl relative"
-        >
-          <div className="absolute top-0 right-0 w-20 h-20 bg-brand-gold" style={{ clipPath: 'polygon(100% 0, 0 0, 100% 100%)' }} />
-          
-          <h3 className="text-3xl font-display font-bold italic uppercase tracking-tighter mb-8">
-            Send a <span className="text-brand-neon neon-text-glow">Message</span>
-          </h3>
-          
-          <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <label className="text-xs uppercase tracking-widest font-bold text-brand-slate/80">First Name</label>
-                <input 
-                  type="text" 
-                  className="w-full bg-white border border-brand-slate/20 px-4 py-3 focus:outline-none focus:border-brand-neon focus:ring-1 focus:ring-brand-neon transition-all font-medium text-brand-midnight"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="text-xs uppercase tracking-widest font-bold text-brand-slate/80">Last Name</label>
-                <input 
-                  type="text" 
-                  className="w-full bg-white border border-brand-slate/20 px-4 py-3 focus:outline-none focus:border-brand-neon focus:ring-1 focus:ring-brand-neon transition-all font-medium text-brand-midnight"
-                />
-              </div>
-            </div>
-            
-            <div className="space-y-2">
-              <label className="text-xs uppercase tracking-widest font-bold text-brand-slate/80">Email Address</label>
-              <input 
-                type="email" 
-                className="w-full bg-white border border-brand-slate/20 px-4 py-3 focus:outline-none focus:border-brand-neon focus:ring-1 focus:ring-brand-neon transition-all font-medium text-brand-midnight"
-              />
-            </div>
-
-            <div className="space-y-2">
-              <label className="text-xs uppercase tracking-widest font-bold text-brand-slate/80">Your Message</label>
-              <textarea 
-                rows={4}
-                className="w-full bg-white border border-brand-slate/20 px-4 py-3 focus:outline-none focus:border-brand-neon focus:ring-1 focus:ring-brand-neon transition-all font-medium resize-none text-brand-midnight"
-              ></textarea>
-            </div>
-
-            <button 
-              type="submit"
-              className="w-full group flex items-center justify-center gap-3 bg-brand-gold text-brand-midnight px-8 py-5 text-lg font-display font-bold italic uppercase tracking-widest hover:bg-brand-neon hover:neon-hover-glow transition-all duration-300"
-            >
-              <span>Send</span>
-              <ArrowRight className="group-hover:translate-x-2 transition-transform" />
-            </button>
-          </form>
-        </motion.div>
-
       </div>
-      
-      {/* Bottom Footer Line */}
-      <div className="border-t border-brand-midnight/10 bg-brand-kinetic text-center py-6">
-        <p className="text-brand-slate/60 text-sm font-medium uppercase tracking-widest">
-          &copy; {new Date().getFullYear()} Game Changers FZCO. All rights reserved.
-        </p>
-      </div>
-    </footer>
+    </section>
   );
 }

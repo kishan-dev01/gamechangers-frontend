@@ -4,15 +4,6 @@ import { ArrowRight } from 'lucide-react';
 
 const slides = [
   {
-    id: 'tennis',
-    type: 'video',
-    src: '/videos/vid1.mp4',
-    poster: 'https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?q=80&w=2675&auto=format&fit=crop',
-    title: 'Master The Court',
-    subtitle: 'Game Changers Falcons in the World Tennis League.',
-    sport: 'Tennis'
-  },
-  {
     id: 'cricket',
     type: 'video',
     src: '/videos/vid2.mp4',
@@ -22,6 +13,25 @@ const slides = [
     sport: 'Cricket'
   },
   {
+    id: 'golf',
+    type: 'video',
+    src: '/videos/vid4.mp4',
+    poster: 'https://images.unsplash.com/photo-1587174486073-ae16fdf9ce79?q=80&w=2940&auto=format&fit=crop',
+    title: 'Precision & Prestige',
+    subtitle: 'Co-founders of the elite Stars Golf League.',
+    sport: 'Golf'
+  },
+  {
+    id: 'tennis',
+    type: 'video',
+    src: '/videos/vid1.mp4',
+    poster: 'https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?q=80&w=2675&auto=format&fit=crop',
+    title: 'Master The Court',
+    subtitle: 'Game Changers Falcons in the World Tennis League.',
+    sport: 'Tennis'
+  },
+
+  {
     id: 'padel',
     type: 'video',
     src: '/videos/vid3.mp4',
@@ -30,15 +40,7 @@ const slides = [
     subtitle: 'Building high-value sports IPs in Padel.',
     sport: 'Padel'
   },
-  {
-    id: 'golf',
-    type: 'video',
-    src: '/videos/vid4.mp4',
-    poster: 'https://images.unsplash.com/photo-1587174486073-ae16fdf9ce79?q=80&w=2940&auto=format&fit=crop',
-    title: 'Precision & Prestige',
-    subtitle: 'Co-founders of the elite Stars Golf League.',
-    sport: 'Golf'
-  }
+
 ];
 
 export default function Hero() {
