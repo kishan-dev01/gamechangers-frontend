@@ -31,25 +31,24 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/95 border-b border-brand-slate/10 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'
-      }`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 border-b border-brand-slate/10 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'
+        }`}
     >
       <div className="max-w-[1600px] mx-auto px-6 md:px-12 flex items-center justify-between">
-        
+
         {/* Left: Logo */}
-        <a href="#home" className="text-2xl font-display font-bold italic tracking-tighter uppercase z-50 text-brand-midnight whitespace-nowrap">
-          Game<span className="text-brand-gold">Changers</span>
+        <a href="#home" className="z-50 flex items-center">
+          <img src="/logo.png" alt="Game Changers Logo" className="h-14 w-auto object-contain" />
         </a>
 
         {/* Center & Right: Desktop Nav */}
         <div className="hidden lg:flex items-center gap-6 xl:gap-8">
-          
+
           {/* Main Navigation (Center) */}
           <div className="flex items-center gap-4 xl:gap-8">
             <a href="#home" className="text-xs xl:text-sm font-bold tracking-widest uppercase text-brand-midnight hover:text-brand-neon transition-colors">Home</a>
             <a href="#about" className="text-xs xl:text-sm font-bold tracking-widest uppercase text-brand-midnight hover:text-brand-neon transition-colors">About</a>
-            
+
             {/* Teams Dropdown */}
             <div className="relative group py-2">
               <button className="flex items-center gap-1 text-xs xl:text-sm font-bold tracking-widest uppercase text-brand-midnight hover:text-brand-neon transition-colors">
@@ -83,7 +82,7 @@ export default function Navbar() {
           <div className="flex items-center gap-4 xl:gap-6">
             <a href="#partners" className="text-xs xl:text-sm font-bold tracking-widest uppercase text-brand-midnight hover:text-brand-neon transition-colors">Partners</a>
             <a href="#contact" className="text-xs xl:text-sm font-bold tracking-widest uppercase text-brand-midnight hover:text-brand-neon transition-colors">Contact</a>
-            
+
             <a
               href="#contact"
               className="px-6 py-3 ml-2 bg-brand-gold text-brand-midnight text-xs xl:text-sm font-extrabold tracking-widest uppercase hover:bg-brand-neon hover:neon-hover-glow transition-all whitespace-nowrap shadow-sm hover:shadow-md"
@@ -114,10 +113,10 @@ export default function Navbar() {
               <div className="flex flex-col items-center gap-6 w-full max-w-sm mt-10">
                 <MobileLink href="#home">Home</MobileLink>
                 <MobileLink href="#about">About</MobileLink>
-                
+
                 {/* Mobile Teams Dropdown Accordion */}
                 <div className="w-full text-center">
-                  <button 
+                  <button
                     onClick={() => toggleDropdown('teams')}
                     className="text-2xl font-display font-bold italic uppercase text-brand-midnight hover:text-brand-neon transition-all flex items-center justify-center gap-2 mx-auto"
                   >
@@ -125,7 +124,7 @@ export default function Navbar() {
                   </button>
                   <AnimatePresence>
                     {activeDropdown === 'teams' && (
-                      <motion.div 
+                      <motion.div
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: 'auto', opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
@@ -140,7 +139,7 @@ export default function Navbar() {
 
                 {/* Mobile Seasons Dropdown Accordion */}
                 <div className="w-full text-center">
-                  <button 
+                  <button
                     onClick={() => toggleDropdown('seasons')}
                     className="text-2xl font-display font-bold italic uppercase text-brand-midnight hover:text-brand-neon transition-all flex items-center justify-center gap-2 mx-auto"
                   >
@@ -148,7 +147,7 @@ export default function Navbar() {
                   </button>
                   <AnimatePresence>
                     {activeDropdown === 'seasons' && (
-                      <motion.div 
+                      <motion.div
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: 'auto', opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
@@ -166,7 +165,7 @@ export default function Navbar() {
                 <div className="w-16 h-px bg-brand-slate/20 my-2" />
                 <MobileLink href="#partners">Partners</MobileLink>
                 <MobileLink href="#contact">Contact</MobileLink>
-                
+
                 <a
                   href="#contact"
                   onClick={() => setMobileMenuOpen(false)}

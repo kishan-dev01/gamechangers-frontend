@@ -75,7 +75,7 @@ export default function Hero() {
                 loop
                 muted
                 playsInline
-                className="w-full h-full object-cover opacity-60"
+                className="w-full h-full object-cover opacity-70"
                 src={slides[current].src}
                 poster={slides[current].poster}
               />
@@ -86,9 +86,7 @@ export default function Hero() {
                 className="w-full h-full object-cover opacity-60"
               />
             )}
-            {/* Contrast Overlay */}
-            {/* <div className="absolute inset-0 bg-gradient-to-b from-brand-kinetic/90 via-transparent to-brand-kinetic/90" /> */}
-            {/* <div className="absolute inset-0 bg-white/30" /> Extra layer for deep midnight feel */}
+
           </motion.div>
         </AnimatePresence>
       </div>
@@ -104,10 +102,10 @@ export default function Hero() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="max-w-3xl"
           >
-            <span className="text-brand-neon font-bold uppercase tracking-[0.2em] text-sm mb-4 block neon-text-glow">
+            <span className="text-brand-neon font-bold uppercase tracking-[0.2em] text-sm mb-4 block">
               {slides[current].sport}
             </span>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold italic tracking-tighter uppercase leading-[0.9] text-brand-midnight mb-6">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold italic tracking-[0.1em] uppercase leading-[0.9] text-brand-midnight mb-6">
               {slides[current].title}
             </h1>
             <p className="text-lg md:text-2xl font-medium text-brand-midnight/80 mb-10 max-w-2xl leading-relaxed">
