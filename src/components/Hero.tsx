@@ -56,7 +56,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="relative h-screen w-full flex items-center overflow-hidden bg-brand-midnight">
+    <section id="home" className="relative h-screen w-full flex items-center overflow-hidden bg-brand-kinetic">
 
       {/* Background Media Crossfade */}
       <div className="absolute inset-0 z-0">
@@ -87,8 +87,8 @@ export default function Hero() {
               />
             )}
             {/* Contrast Overlay */}
-            {/* <div className="absolute inset-0 bg-gradient-to-b from-brand-midnight/90 via-transparent to-brand-midnight/90" /> */}
-            {/* <div className="absolute inset-0 bg-brand-midnight/30" /> Extra layer for deep midnight feel */}
+            {/* <div className="absolute inset-0 bg-gradient-to-b from-brand-kinetic/90 via-transparent to-brand-kinetic/90" /> */}
+            {/* <div className="absolute inset-0 bg-white/30" /> Extra layer for deep midnight feel */}
           </motion.div>
         </AnimatePresence>
       </div>
@@ -107,10 +107,10 @@ export default function Hero() {
             <span className="text-brand-neon font-bold uppercase tracking-[0.2em] text-sm mb-4 block neon-text-glow">
               {slides[current].sport}
             </span>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold italic tracking-tighter uppercase leading-[0.9] text-brand-kinetic mb-6">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold italic tracking-tighter uppercase leading-[0.9] text-brand-midnight mb-6">
               {slides[current].title}
             </h1>
-            <p className="text-lg md:text-2xl font-medium text-brand-kinetic/80 mb-10 max-w-2xl leading-relaxed">
+            <p className="text-lg md:text-2xl font-medium text-brand-midnight/80 mb-10 max-w-2xl leading-relaxed">
               {slides[current].subtitle}
             </p>
 
@@ -133,7 +133,7 @@ export default function Hero() {
             onClick={() => handleDotClick(idx)}
             className={`h-1.5 transition-all duration-500 rounded-full ${current === idx
               ? 'w-12 bg-brand-neon neon-glow'
-              : 'w-4 bg-brand-kinetic/30 hover:bg-brand-kinetic/60'
+              : 'w-4 bg-brand-midnight/30 hover:bg-brand-midnight/60'
               }`}
             aria-label={`Go to slide ${idx + 1}`}
           />

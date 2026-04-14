@@ -35,7 +35,7 @@ const portfolioItems = [
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="py-24 bg-brand-midnight text-brand-kinetic relative z-0">
+    <section id="portfolio" className="py-24 bg-brand-kinetic text-brand-midnight relative z-0">
       <div className="max-w-[1400px] mx-auto px-4 md:px-8">
         
         {/* Header */}
@@ -45,7 +45,7 @@ export default function Portfolio() {
           viewport={{ once: true, amount: 0.3 }}
           className="mb-16 md:mb-24 flex flex-col items-center text-center space-y-6"
         >
-          <h2 className="text-4xl md:text-7xl font-display font-bold italic uppercase tracking-tighter text-brand-kinetic">
+          <h2 className="text-4xl md:text-7xl font-display font-bold italic uppercase tracking-tighter text-brand-midnight">
             The Greatest Show <br className="hidden md:block"/>
             <span className="text-brand-neon neon-text-glow">Beyond Boundaries</span>
           </h2>
@@ -68,16 +68,16 @@ export default function Portfolio() {
                 alt={item.title} 
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-midnight/90 via-brand-midnight/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500 pointer-events-none" />
               
               <div className="absolute inset-0 p-8 flex flex-col justify-end transform transition-transform duration-500 group-hover:-translate-y-4">
                 <span className="text-brand-neon font-bold uppercase tracking-[0.2em] text-sm mb-2">
                   {item.sport}
                 </span>
-                <h3 className="text-4xl md:text-5xl font-display font-bold italic uppercase tracking-tighter mb-4 text-brand-kinetic">
+                <h3 className="text-4xl md:text-5xl font-display font-bold italic uppercase tracking-tighter mb-4 text-brand-midnight">
                   {item.title}
                 </h3>
-                <p className="text-brand-kinetic/80 font-medium max-w-sm md:opacity-0 md:translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 leading-relaxed">
+                <p className="text-brand-midnight/80 font-medium max-w-sm md:opacity-0 md:translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -93,7 +93,7 @@ export default function Portfolio() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="mt-20 text-center"
         >
-          <p className="text-xl md:text-3xl font-display font-bold italic uppercase tracking-wide text-brand-kinetic/80 max-w-4xl mx-auto leading-tight">
+          <p className="text-xl md:text-3xl font-display font-bold italic uppercase tracking-wide text-brand-midnight/80 max-w-4xl mx-auto leading-tight">
             "Join us as we continue to push boundaries, <br className="hidden md:block"/>
             <span className="text-brand-neon neon-text-glow">elevate excellence</span>, and change the game forever!"
           </p>

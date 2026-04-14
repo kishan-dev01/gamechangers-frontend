@@ -4,17 +4,17 @@
 
 @layer base {
   body {
-    @apply bg-brand-midnight text-brand-kinetic font-sans antialiased;
+    @apply bg-brand-kinetic text-brand-midnight font-sans antialiased;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display tracking-tight text-brand-kinetic font-bold uppercase italic;
+    @apply font-display tracking-tight text-brand-midnight font-bold uppercase italic;
   }
 }
 
 @layer utilities {
   .glass-card {
-    @apply bg-brand-slate/80 backdrop-blur-md border border-brand-gold/30;
+    @apply bg-white/80 backdrop-blur-md border border-brand-slate/20 shadow-sm;
   }
   .neon-glow {
     filter: drop-shadow(0 0 12px theme('colors.brand.neon'));

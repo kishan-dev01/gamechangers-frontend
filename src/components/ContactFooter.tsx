@@ -15,7 +15,7 @@ const InstagramIcon = () => (
 
 export default function ContactFooter() {
   return (
-    <footer id="contact" className="bg-brand-midnight text-brand-kinetic relative z-0">
+    <footer id="contact" className="bg-brand-kinetic text-brand-midnight relative z-0">
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-24 md:py-32 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
         
         {/* Left Column - Contact Info & Socials */}
@@ -29,7 +29,7 @@ export default function ContactFooter() {
             <h2 className="text-4xl md:text-6xl font-display font-bold italic uppercase tracking-tighter">
               Get in touch
             </h2>
-            <p className="text-xl text-brand-kinetic/80 font-medium max-w-md">
+            <p className="text-xl text-brand-midnight/80 font-medium max-w-md">
               We’d love to hear from you. Reach out to explore partnerships or learn more about our global sporting legacy.
             </p>
           </motion.div>
@@ -40,7 +40,7 @@ export default function ContactFooter() {
                 <Mail className="text-brand-neon w-6 h-6" />
               </div>
               <div>
-                <span className="block text-sm uppercase tracking-widest text-gray-400 font-bold mb-1">Email</span>
+                <span className="block text-sm uppercase tracking-widest text-brand-slate font-bold mb-1">Email</span>
                 <a href="mailto:Info@gamechangersfzco.com" className="hover:text-brand-neon hover:neon-text-glow transition-all font-medium">
                   Info@gamechangersfzco.com
                 </a>
@@ -52,8 +52,8 @@ export default function ContactFooter() {
                 <MapPin className="text-brand-neon w-6 h-6" />
               </div>
               <div>
-                <span className="block text-sm uppercase tracking-widest text-gray-400 font-bold mb-1">Address</span>
-                <address className="not-italic hover:text-brand-neon hover:neon-text-glow transition-all font-medium text-brand-kinetic/80">
+                <span className="block text-sm uppercase tracking-widest text-brand-slate font-bold mb-1">Address</span>
+                <address className="not-italic hover:text-brand-neon hover:neon-text-glow transition-all font-medium text-brand-midnight/80">
                   Office 43-44, Municipality Building,<br />
                   Al Fahidi, Bur Dubai, 12345, Dubai
                 </address>
@@ -61,14 +61,14 @@ export default function ContactFooter() {
             </div>
           </div>
 
-          <div className="pt-8 border-t border-white/10 flex gap-6">
-            <a href="#" className="p-3 bg-white/5 hover:bg-brand-gold hover:text-brand-midnight hover:neon-hover-glow transition-all">
+          <div className="pt-8 border-t border-brand-midnight/10 flex gap-6">
+            <a href="#" className="p-3 bg-brand-midnight/5 hover:bg-brand-gold hover:text-brand-midnight hover:neon-hover-glow transition-all">
               <FacebookIcon />
             </a>
-            <a href="#" className="p-3 bg-white/5 hover:bg-brand-gold hover:text-brand-midnight hover:neon-hover-glow transition-all">
+            <a href="#" className="p-3 bg-brand-midnight/5 hover:bg-brand-gold hover:text-brand-midnight hover:neon-hover-glow transition-all">
               <LinkedinIcon />
             </a>
-            <a href="#" className="p-3 bg-white/5 hover:bg-brand-gold hover:text-brand-midnight hover:neon-hover-glow transition-all">
+            <a href="#" className="p-3 bg-brand-midnight/5 hover:bg-brand-gold hover:text-brand-midnight hover:neon-hover-glow transition-all">
               <InstagramIcon />
             </a>
           </div>
@@ -79,7 +79,7 @@ export default function ContactFooter() {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="glass-card text-brand-kinetic p-8 md:p-12 shadow-2xl relative"
+          className="glass-card text-brand-midnight p-8 md:p-12 shadow-2xl relative"
         >
           <div className="absolute top-0 right-0 w-20 h-20 bg-brand-gold" style={{ clipPath: 'polygon(100% 0, 0 0, 100% 100%)' }} />
           
@@ -90,34 +90,34 @@ export default function ContactFooter() {
           <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label className="text-xs uppercase tracking-widest font-bold text-gray-300">First Name</label>
+                <label className="text-xs uppercase tracking-widest font-bold text-brand-slate/80">First Name</label>
                 <input 
                   type="text" 
-                  className="w-full bg-brand-slate/50 border border-brand-slate px-4 py-3 focus:outline-none focus:border-brand-neon focus:ring-1 focus:ring-brand-neon transition-all font-medium text-brand-kinetic"
+                  className="w-full bg-white border border-brand-slate/20 px-4 py-3 focus:outline-none focus:border-brand-neon focus:ring-1 focus:ring-brand-neon transition-all font-medium text-brand-midnight"
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-xs uppercase tracking-widest font-bold text-gray-300">Last Name</label>
+                <label className="text-xs uppercase tracking-widest font-bold text-brand-slate/80">Last Name</label>
                 <input 
                   type="text" 
-                  className="w-full bg-brand-slate/50 border border-brand-slate px-4 py-3 focus:outline-none focus:border-brand-neon focus:ring-1 focus:ring-brand-neon transition-all font-medium text-brand-kinetic"
+                  className="w-full bg-white border border-brand-slate/20 px-4 py-3 focus:outline-none focus:border-brand-neon focus:ring-1 focus:ring-brand-neon transition-all font-medium text-brand-midnight"
                 />
               </div>
             </div>
             
             <div className="space-y-2">
-              <label className="text-xs uppercase tracking-widest font-bold text-gray-300">Email Address</label>
+              <label className="text-xs uppercase tracking-widest font-bold text-brand-slate/80">Email Address</label>
               <input 
                 type="email" 
-                className="w-full bg-brand-slate/50 border border-brand-slate px-4 py-3 focus:outline-none focus:border-brand-neon focus:ring-1 focus:ring-brand-neon transition-all font-medium text-brand-kinetic"
+                className="w-full bg-white border border-brand-slate/20 px-4 py-3 focus:outline-none focus:border-brand-neon focus:ring-1 focus:ring-brand-neon transition-all font-medium text-brand-midnight"
               />
             </div>
 
             <div className="space-y-2">
-              <label className="text-xs uppercase tracking-widest font-bold text-gray-300">Your Message</label>
+              <label className="text-xs uppercase tracking-widest font-bold text-brand-slate/80">Your Message</label>
               <textarea 
                 rows={4}
-                className="w-full bg-brand-slate/50 border border-brand-slate px-4 py-3 focus:outline-none focus:border-brand-neon focus:ring-1 focus:ring-brand-neon transition-all font-medium resize-none text-brand-kinetic"
+                className="w-full bg-white border border-brand-slate/20 px-4 py-3 focus:outline-none focus:border-brand-neon focus:ring-1 focus:ring-brand-neon transition-all font-medium resize-none text-brand-midnight"
               ></textarea>
             </div>
 
@@ -134,8 +134,8 @@ export default function ContactFooter() {
       </div>
       
       {/* Bottom Footer Line */}
-      <div className="border-t border-white/10 bg-brand-midnight text-center py-6">
-        <p className="text-gray-500 text-sm font-medium uppercase tracking-widest">
+      <div className="border-t border-brand-midnight/10 bg-brand-kinetic text-center py-6">
+        <p className="text-brand-slate/60 text-sm font-medium uppercase tracking-widest">
           &copy; {new Date().getFullYear()} Game Changers FZCO. All rights reserved.
         </p>
       </div>

@@ -33,7 +33,7 @@ function App() {
   }, []);
 
   return (
-    <div className="relative w-full bg-brand-midnight min-h-screen selection:bg-brand-neon selection:text-brand-midnight">
+    <div className="relative w-full bg-brand-kinetic min-h-screen selection:bg-brand-neon selection:text-brand-midnight">
       <Navbar />
       <main>
         <Hero />

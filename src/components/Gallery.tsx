@@ -21,14 +21,14 @@ export default function Gallery() {
   const y2 = useTransform(scrollYProgress, [0, 1], [0, 150]);
 
   return (
-    <section id="gallery" ref={containerRef} className="py-32 bg-brand-slate relative overflow-hidden slash-divider-both z-10">
+    <section id="gallery" ref={containerRef} className="py-32 bg-white relative overflow-hidden slash-divider-both z-10">
       <div className="max-w-7xl mx-auto px-6 md:px-12 mb-16">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-6xl font-display font-bold italic uppercase text-brand-kinetic tracking-tighter">
+          <h2 className="text-4xl md:text-6xl font-display font-bold italic uppercase text-brand-midnight tracking-tighter">
             Memorable Moments <br />
             <span className="text-brand-neon neon-text-glow">To Admire</span>
           </h2>
