@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 export default function Contact() {
   const [formState, setFormState] = useState('idle'); // idle, submitting, success
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setFormState('submitting');
     // Simulate API call
@@ -153,7 +153,7 @@ export default function Contact() {
                 <textarea
                   id="message"
                   required
-                  rows="4"
+                  rows={4}
                   placeholder="Your Message *"
                   className="w-full bg-gray-50 border-b-2 border-gray-200 px-4 py-4 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-brand-gold transition-colors duration-300 resize-none"
                 ></textarea>

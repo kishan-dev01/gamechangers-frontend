@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 
 // Merged into a single structured array for the Bento Grid layout
 const galleryImages = [
@@ -58,7 +58,7 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 40 },
   show: {
     opacity: 1,
@@ -67,7 +67,13 @@ const itemVariants = {
   },
 };
 
-function GalleryItem({ src, label, gridClasses }) {
+interface GalleryItemProps {
+  src: string;
+  label: string;
+  gridClasses: string;
+}
+
+function GalleryItem({ src, label, gridClasses }: GalleryItemProps) {
   return (
     <motion.div
       variants={itemVariants}
