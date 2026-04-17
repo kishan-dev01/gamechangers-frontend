@@ -1,12 +1,11 @@
 import { useEffect } from 'react';
 import Lenis from 'lenis';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import GameChangersStats from './components/GameChangersStats';
-import AboutUs from './components/AboutUs';
-import Portfolio from './components/Portfolio';
-import Gallery from './components/Gallery';
-import ContactFooter from './components/ContactFooter';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/layout/Navbar';
+import ContactFooter from './components/layout/ContactFooter';
+import Home from './pages/Home';
+import ContactUs from './pages/ContactUs';
+import AboutUs from './pages/AboutUs';
 
 function App() {
   useEffect(() => {
@@ -33,17 +32,17 @@ function App() {
   }, []);
 
   return (
-    <div className="relative w-full bg-brand-kinetic min-h-screen selection:bg-brand-neon selection:text-brand-midnight">
-      <Navbar />
-      <main>
-        <Hero />
-        <GameChangersStats />
-        <AboutUs />
-        <Portfolio />
-        <Gallery />
-      </main>
-      <ContactFooter />
-    </div>
+    <Router>
+      <div className="relative w-full bg-brand-kinetic min-h-screen selection:bg-brand-neon selection:text-brand-midnight">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<ContactUs />} />
+          <Route path="/about" element={<AboutUs />} />
+        </Routes>
+        <ContactFooter />
+      </div>
+    </Router>
   )
 }
 

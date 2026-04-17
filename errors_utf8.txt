@@ -1,0 +1,17 @@
+﻿src/components/home/AboutUs.tsx(30,13): error TS7006: Parameter 'direction' implicitly has an 'any' type.
+src/components/home/AboutUs.tsx(42,12): error TS7006: Parameter 'direction' implicitly has an 'any' type.
+src/components/home/AboutUs.tsx(223,26): error TS6133: 'slide' is declared but its value is never read.
+src/components/home/AboutUs.tsx(244,15): error TS2322: Type '{ enter: (direction: any) => { x: number; opacity: number; scale: number; }; center: { zIndex: number; x: number; opacity: number; scale: number; transition: { duration: number; ease: number[]; }; }; exit: (direction: any) => { ...; }; }' is not assignable to type 'Variants'.
+  Property 'center' is incompatible with index signature.
+    Type '{ zIndex: number; x: number; opacity: number; scale: number; transition: { duration: number; ease: number[]; }; }' is not assignable to type 'Variant'.
+      Type '{ zIndex: number; x: number; opacity: number; scale: number; transition: { duration: number; ease: number[]; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ zIndex: number; x: number; opacity: number; scale: number; transition: { duration: number; ease: number[]; }; }' is not assignable to type '{ transition?: Transition<any> | undefined; transitionEnd?: ResolvedValues$1 | undefined; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: number[]; }' is not assignable to type 'Transition<any> | undefined'.
+              Type '{ duration: number; ease: number[]; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: number[]; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'number[]' is not assignable to type 'Easing | Easing[] | undefined'.
+                      Type 'number[]' is not assignable to type 'EasingFunction | Easing[]'.
+                        Type 'number[]' is not assignable to type 'Easing[]'.
+                          Type 'number' is not assignable to type 'Easing'.
