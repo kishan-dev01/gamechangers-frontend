@@ -81,7 +81,7 @@ export default function Navbar() {
 
           {/* Utility + Business (Right) */}
           <div className="flex items-center gap-4 xl:gap-6">
-            <Link to="/#partners" className={`text-xs xl:text-sm font-bold tracking-widest uppercase transition-colors duration-300 ${isScrolled ? 'text-white hover:text-brand-neon' : 'text-brand-midnight hover:text-brand-neon'}`}>Partners</Link>
+            <Link to="/partners" className={`text-xs xl:text-sm font-bold tracking-widest uppercase transition-colors duration-300 ${isScrolled ? 'text-white hover:text-brand-neon' : 'text-brand-midnight hover:text-brand-neon'}`}>Partners</Link>
             <Link to="/contact" className={`text-xs xl:text-sm font-bold tracking-widest uppercase transition-colors duration-300 ${isScrolled ? 'text-white hover:text-brand-neon' : 'text-brand-midnight hover:text-brand-neon'}`}>Contact</Link>
 
             <Link
@@ -164,7 +164,7 @@ export default function Navbar() {
                 <MobileLink to="/#leadership">Leadership</MobileLink>
                 <MobileLink to="/#media">Media</MobileLink>
                 <div className="w-16 h-px bg-brand-slate/20 my-2" />
-                <MobileLink to="/#partners">Partners</MobileLink>
+                <MobileLink to="/partners">Partners</MobileLink>
                 <MobileLink to="/contact">Contact</MobileLink>
 
                 <Link
