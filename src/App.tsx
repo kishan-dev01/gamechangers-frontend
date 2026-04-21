@@ -8,6 +8,8 @@ import ContactUs from './pages/ContactUs';
 import AboutUs from './pages/AboutUs';
 import SouthAfricaChampions from './pages/SouthAfricaChampions';
 import Partners from './pages/Partners';
+import Season1 from './pages/Season1';
+import Season2 from './pages/Season2';
 
 function App() {
   useEffect(() => {
@@ -42,6 +44,8 @@ function App() {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/partners" element={<Partners />} />
+          <Route path="/seasons/season-1" element={<Season1 />} />
+          <Route path="/seasons/season-2" element={<Season2 />} />
           <Route path="/teams/south-africa-champions" element={<SouthAfricaChampions />} />
         </Routes>
         <ContactFooter />

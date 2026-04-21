@@ -67,8 +67,8 @@ export default function Navbar() {
                 Leagues <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
               </button>
               <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ${isScrolled ? 'bg-brand-midnight/95 border border-brand-slate/50' : 'bg-white/95 border border-brand-slate/10'} backdrop-blur-md shadow-[0_20px_40px_-5px_rgba(0,0,0,0.1)] overflow-hidden rounded-b-md`}>
-                <Link to="/#season-1" className={`block px-6 py-4 text-xs font-bold uppercase tracking-widest transition-colors ${isScrolled ? 'text-white hover:bg-brand-slate hover:text-brand-neon border-b border-brand-slate/50' : 'text-brand-midnight hover:bg-brand-kinetic hover:text-brand-neon border-b border-brand-slate/5'}`}>Season 1</Link>
-                <Link to="/#season-2" className={`block px-6 py-4 text-xs font-bold uppercase tracking-widest transition-colors ${isScrolled ? 'text-white hover:bg-brand-slate hover:text-brand-neon' : 'text-brand-midnight hover:bg-brand-kinetic hover:text-brand-neon'}`}>Season 2</Link>
+                <Link to="/seasons/season-1" className={`block px-6 py-4 text-xs font-bold uppercase tracking-widest transition-colors ${isScrolled ? 'text-white hover:bg-brand-slate hover:text-brand-neon border-b border-brand-slate/50' : 'text-brand-midnight hover:bg-brand-kinetic hover:text-brand-neon border-b border-brand-slate/5'}`}>Season 1</Link>
+                <Link to="/seasons/season-2" className={`block px-6 py-4 text-xs font-bold uppercase tracking-widest transition-colors ${isScrolled ? 'text-white hover:bg-brand-slate hover:text-brand-neon' : 'text-brand-midnight hover:bg-brand-kinetic hover:text-brand-neon'}`}>Season 2</Link>
               </div>
             </div>
 
@@ -154,8 +154,8 @@ export default function Navbar() {
                         exit={{ height: 0, opacity: 0 }}
                         className="flex flex-col gap-4 mt-4 overflow-hidden"
                       >
-                        <Link to="/#season-1" onClick={() => setMobileMenuOpen(false)} className="text-brand-midnight/70 font-bold uppercase tracking-widest text-xs block py-1">Season 1</Link>
-                        <Link to="/#season-2" onClick={() => setMobileMenuOpen(false)} className="text-brand-midnight/70 font-bold uppercase tracking-widest text-xs block py-1">Season 2</Link>
+                        <Link to="/seasons/season-1" onClick={() => setMobileMenuOpen(false)} className="text-brand-midnight/70 font-bold uppercase tracking-widest text-xs block py-1">Season 1</Link>
+                        <Link to="/seasons/season-2" onClick={() => setMobileMenuOpen(false)} className="text-brand-midnight/70 font-bold uppercase tracking-widest text-xs block py-1">Season 2</Link>
                       </motion.div>
                     )}
                   </AnimatePresence>
