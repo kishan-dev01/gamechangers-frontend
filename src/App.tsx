@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import Lenis from 'lenis';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ScrollToTop from './components/layout/ScrollToTop';
 import Navbar from './components/layout/Navbar';
 import ContactFooter from './components/layout/ContactFooter';
 import Home from './pages/Home';
@@ -37,6 +38,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="relative w-full bg-brand-kinetic min-h-screen selection:bg-brand-neon selection:text-brand-midnight">
         <Navbar />
         <Routes>
