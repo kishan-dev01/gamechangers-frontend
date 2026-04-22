@@ -33,31 +33,31 @@ export default function LionsSeason2() {
   // Bento gallery array
   const galleryImages = [
     {
-      src: "https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?q=80&w=2674&auto=format&fit=crop",
+      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1776879452/533454429_17879762478379767_6832909437359134307_n_ajztpi.jpg",
       gridClasses: "col-span-1 md:col-span-8 row-span-1 md:row-span-2",
     },
     {
-      src: "https://images.unsplash.com/photo-1622279457486-62dcc4a631d6?q=80&w=2670&auto=format&fit=crop",
+      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1776879452/lions-1_patfkg.webp",
       gridClasses: "col-span-1 md:col-span-4 row-span-1 md:row-span-1",
     },
     {
-      src: "https://images.unsplash.com/photo-1587280501635-6cb10cebf4ef?q=80&w=2670&auto=format&fit=crop",
+      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1776879452/534572407_17879762517379767_2382216194756587180_n_ucabky.jpg",
       gridClasses: "col-span-1 md:col-span-4 row-span-1 md:row-span-1",
     },
     {
-      src: "https://images.unsplash.com/photo-1594917454807-640f807abfa9?q=80&w=2650&auto=format&fit=crop",
+      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1776879452/535273202_17879762469379767_15045260084654848_n_fzyhqr.jpg",
       gridClasses: "col-span-1 md:col-span-4 row-span-1 md:row-span-2",
     },
     {
-      src: "https://images.unsplash.com/photo-1625296839395-5ac8490a187a?q=80&w=2574&auto=format&fit=crop",
+      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1776879451/534718917_17879762499379767_2225543511613900230_n_cfmkqq.jpg",
       gridClasses: "col-span-1 md:col-span-4 row-span-1 md:row-span-1",
     },
     {
-      src: "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=2670&auto=format&fit=crop",
+      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1776879659/532661922_17879518116379767_8096867367921986896_n_knrwgp.webp",
       gridClasses: "col-span-1 md:col-span-4 row-span-1 md:row-span-1",
     },
     {
-      src: "https://images.unsplash.com/photo-1622279457486-62dcc4a631d6?q=80&w=2670&auto=format&fit=crop",
+      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1776879658/533570858_17973075662918092_8604347250734056872_n_efefof.jpg",
       gridClasses: "col-span-1 md:col-span-8 row-span-1 md:row-span-1",
     },
   ];
@@ -240,7 +240,7 @@ export default function LionsSeason2() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-50px" }}
-            className="grid grid-cols-1 md:grid-cols-12 auto-rows-[300px] md:auto-rows-[280px] gap-3 md:gap-5"
+            className="grid grid-cols-1 md:grid-cols-12 auto-rows-[300px] md:auto-rows-[280px] gap-3 md:gap-1"
           >
             {galleryImages.map((img, i) => (
               <motion.div
