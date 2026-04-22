@@ -21,10 +21,15 @@ export default function Falcons() {
     }
   };
 
-  // Gallery dummy images (5-6 as requested)
-  const galleryImages = Array.from({ length: 6 }).map((_, i) =>
-    `https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?q=80&w=2674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&sig=${i}` // Tennis placeholder
-  );
+  const galleryImages = [
+    'https://res.cloudinary.com/dtsuewnbj/image/upload/v1776853549/542233997_17889580725346402_1821248596687153690_n_akuxhi.webp',
+    'https://res.cloudinary.com/dtsuewnbj/image/upload/v1776853548/479487125_17919671682046341_6248640717153713569_n_k7wxxq.jpg',
+    'https://res.cloudinary.com/dtsuewnbj/image/upload/v1776853548/624449744_18080235455018392_4255132193738986441_n_uguc2z.jpg',
+    'https://res.cloudinary.com/dtsuewnbj/image/upload/v1776853548/655184086_18114975877594529_335421138537515396_n_v0mpzw.jpg',
+    'https://res.cloudinary.com/dtsuewnbj/image/upload/v1776853548/663142645_18015797615828428_4442459797909036396_n_eegv0c.jpg',
+    'https://res.cloudinary.com/dtsuewnbj/image/upload/v1776853548/624449744_18080235455018392_4255132193738986441_n_uguc2z.jpg',
+  ]
+
 
   return (
     <div className="bg-[#F8F9FA] min-h-screen text-brand-midnight font-sans overflow-hidden">
@@ -52,9 +57,9 @@ export default function Falcons() {
             className="mb-8 w-32 h-32 md:w-48 md:h-48 bg-white rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.1)] p-4 border-2 border-brand-slate/10"
           >
             {/* Using standard logo as falcons logo for now */}
-            <img src="/logo.png" alt="Game Changers Falcons Logo" className="w-full h-full object-contain drop-shadow-md" />
+            <img src="https://res.cloudinary.com/dtsuewnbj/image/upload/v1776853120/IMG_1507_aotwdy.jpg" alt="Game Changers Falcons Logo" className="w-full h-full object-fill rounded-full" />
           </motion.div>
-          
+
           <motion.h1
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -63,7 +68,7 @@ export default function Falcons() {
           >
             Game Changers <br className="hidden md:block" /> <span className="text-[#D32424] drop-shadow-sm">Falcons</span>
           </motion.h1>
-          
+
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -72,7 +77,7 @@ export default function Falcons() {
           >
             Excellence. Competitive Spirit. Modern Vision.
           </motion.p>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -119,7 +124,7 @@ export default function Falcons() {
             <div className="aspect-[4/5] md:aspect-square relative rounded-none overflow-hidden bg-white border border-brand-slate/10 shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-tr from-brand-midnight/70 to-transparent z-10" />
               <img
-                src="https://images.unsplash.com/photo-1622279457486-62dcc4a631d6?q=80&w=2670&auto=format&fit=crop"
+                src="https://res.cloudinary.com/dtsuewnbj/image/upload/v1776853548/624449744_18080235455018392_4255132193738986441_n_uguc2z.jpg"
                 alt="Tennis Match"
                 className="w-full h-full object-cover mix-blend-multiply opacity-90 hover:opacity-100 hover:mix-blend-normal transition-all duration-700 hover:scale-105"
               />
@@ -136,7 +141,7 @@ export default function Falcons() {
       <section className="py-16 md:py-24 bg-white relative border-y border-brand-slate/5">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#D32424]/5 to-transparent pointer-events-none" />
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
-          
+
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -149,7 +154,7 @@ export default function Falcons() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-            
+
             {/* 2024 Season Card */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -160,7 +165,7 @@ export default function Falcons() {
             >
               <div className="border border-brand-slate/10 bg-[#F8F9FA] p-8 md:p-12 hover:bg-white hover:shadow-xl transition-all duration-500 hover:border-[#D32424]/30 h-full flex flex-col relative overflow-hidden flex-grow shadow-sm">
                 <div className="absolute top-0 right-0 p-8 opacity-[0.03] font-display font-black text-9xl italic text-brand-midnight pointer-events-none group-hover:opacity-[0.06] transition-opacity">24</div>
-                
+
                 <div className="flex justify-between items-start mb-8">
                   <div>
                     <div className="inline-block px-4 py-1 border border-brand-slate/20 bg-white text-brand-slate text-xs font-bold tracking-widest uppercase mb-4 shadow-sm group-hover:border-[#D32424] group-hover:text-[#D32424] transition-colors">Abu Dhabi</div>
@@ -170,16 +175,16 @@ export default function Falcons() {
                     </div>
                   </div>
                 </div>
-                
+
                 <p className="text-brand-midnight/80 font-medium leading-relaxed mb-10 flex-grow">
                   The 2024 season marked a historic beginning for Game Changers Falcons, as it was both the inaugural season under new ownership and a defining moment in the World Tennis League...
                 </p>
 
                 <div className="mt-auto relative z-20">
-                    <Link to="/teams/falcons/season-2024" className="inline-flex items-center justify-between w-full p-4 bg-brand-midnight text-white font-bold uppercase tracking-widest text-sm hover:bg-[#D32424] transition-colors group/btn shadow-md">
-                      Explore 2024 Season
-                      <ArrowRight size={20} className="group-hover/btn:translate-x-2 transition-transform" />
-                    </Link>
+                  <Link to="/teams/falcons/season-2024" className="inline-flex items-center justify-between w-full p-4 bg-brand-midnight text-white font-bold uppercase tracking-widest text-sm hover:bg-[#D32424] transition-colors group/btn shadow-md">
+                    Explore 2024 Season
+                    <ArrowRight size={20} className="group-hover/btn:translate-x-2 transition-transform" />
+                  </Link>
                 </div>
               </div>
             </motion.div>
@@ -194,26 +199,26 @@ export default function Falcons() {
             >
               <div className="border border-brand-slate/10 bg-[#F8F9FA] p-8 md:p-12 hover:bg-white hover:shadow-xl transition-all duration-500 hover:border-[#D32424]/30 h-full flex flex-col relative overflow-hidden flex-grow shadow-sm">
                 <div className="absolute top-0 right-0 p-8 opacity-[0.03] font-display font-black text-9xl italic text-brand-midnight pointer-events-none group-hover:opacity-[0.06] transition-opacity">25</div>
-                
+
                 <div className="flex justify-between items-start mb-8">
                   <div>
                     <div className="inline-block px-4 py-1 border border-brand-slate/20 bg-white text-brand-slate text-xs font-bold tracking-widest uppercase mb-4 shadow-sm group-hover:border-[#D32424] group-hover:text-[#D32424] transition-colors">Bengaluru</div>
                     <h3 className="text-4xl font-display font-black italic uppercase text-brand-midnight group-hover:text-[#D32424] transition-colors">2025 Season</h3>
                     <div className="text-xl font-bold tracking-widest text-brand-slate mt-2 flex items-center gap-2">
-                       Season 4
+                      Season 4
                     </div>
                   </div>
                 </div>
-                
+
                 <p className="text-brand-midnight/80 font-medium leading-relaxed mb-10 flex-grow">
                   Held in Bengaluru, marked Season 4 of the tournament and brought together some of the top international tennis stars for another exciting and competitive edition...
                 </p>
 
                 <div className="mt-auto relative z-20">
-                    <Link to="/teams/falcons/season-2025" className="inline-flex items-center justify-between w-full p-4 bg-brand-midnight text-white font-bold uppercase tracking-widest text-sm hover:bg-[#D32424] transition-colors group/btn shadow-md">
-                      Explore 2025 Season
-                      <ArrowRight size={20} className="group-hover/btn:translate-x-2 transition-transform" />
-                    </Link>
+                  <Link to="/teams/falcons/season-2025" className="inline-flex items-center justify-between w-full p-4 bg-brand-midnight text-white font-bold uppercase tracking-widest text-sm hover:bg-[#D32424] transition-colors group/btn shadow-md">
+                    Explore 2025 Season
+                    <ArrowRight size={20} className="group-hover/btn:translate-x-2 transition-transform" />
+                  </Link>
                 </div>
               </div>
             </motion.div>
