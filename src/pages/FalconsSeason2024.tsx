@@ -21,7 +21,6 @@ export default function FalconsSeason2024() {
     }
   };
 
-  const dummyPlayerImg = "https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?q=80&w=2674&auto=format&fit=crop";
 
   const squad = [
     { name: "Andrey Rublev", image: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1776854123/andrey_mu5vok.jpg" },
