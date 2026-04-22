@@ -32,7 +32,7 @@ export default function FalconsSeason2025() {
 
   // Gallery dummy images for the season
   const galleryImages = Array.from({ length: 6 }).map((_, i) =>
-    `https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?q=80&w=2674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&sig=${i+20}`
+    `https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?q=80&w=2674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&sig=${i + 20}`
   );
 
   return (
@@ -55,11 +55,11 @@ export default function FalconsSeason2025() {
             transition={{ duration: 1, ease: "easeOut" }}
             className="mb-8"
           >
-             <div className="inline-block px-6 py-2 border-2 border-[#D32424] rounded-none text-[#D32424] font-bold tracking-widest uppercase bg-[#D32424]/10 backdrop-blur-sm shadow-sm md:text-lg">
-                Bengaluru
+            <div className="inline-block px-6 py-2 border-2 border-[#D32424] rounded-none text-[#D32424] font-bold tracking-widest uppercase bg-[#D32424]/10 backdrop-blur-sm shadow-sm md:text-lg">
+              Bengaluru
             </div>
           </motion.div>
-          
+
           <motion.h1
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -68,7 +68,7 @@ export default function FalconsSeason2025() {
           >
             2025 <span className="text-[#D32424] drop-shadow-sm">Season</span>
           </motion.h1>
-          
+
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -77,7 +77,7 @@ export default function FalconsSeason2025() {
           >
             A Global Platform
           </motion.p>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -115,9 +115,9 @@ export default function FalconsSeason2025() {
       </section>
 
       {/* 3. THE SQUAD */}
-      <section className="py-16 md:py-24 bg-white relative">
+      <section className="py-12 md:py-16 bg-white relative">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-          
+
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -140,22 +140,22 @@ export default function FalconsSeason2025() {
           >
             {squad.map((player, idx) => (
               <motion.div key={idx} variants={fadeUp} className="group cursor-default">
-                  <div className="aspect-[3/4] relative overflow-hidden bg-[#F8F9FA] border border-brand-slate/10 shadow-sm mb-6">
-                      <div className="absolute inset-0 bg-gradient-to-t from-brand-midnight/90 via-transparent to-transparent z-10 opacity-60 group-hover:opacity-80 transition-opacity" />
-                      <img 
-                          src={player.image} 
-                          alt={player.name}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                      />
-                      <div className="absolute bottom-6 left-6 z-20">
-                          <div className="text-[#FFD500] text-sm font-bold tracking-widest uppercase mb-1 flex items-center gap-2">
-                             <Target size={16} /> Player
-                          </div>
-                          <div className="text-2xl font-display font-bold italic uppercase tracking-wider text-white">
-                              {player.name}
-                          </div>
-                      </div>
+                <div className="aspect-[3/4] relative overflow-hidden bg-[#F8F9FA] border border-brand-slate/10 shadow-sm mb-6">
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-midnight/90 via-transparent to-transparent z-10 opacity-60 group-hover:opacity-80 transition-opacity" />
+                  <img
+                    src={player.image}
+                    alt={player.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute bottom-6 left-6 z-20">
+                    <div className="text-[#FFD500] text-sm font-bold tracking-widest uppercase mb-1 flex items-center gap-2">
+                      <Target size={16} /> Player
+                    </div>
+                    <div className="text-2xl font-display font-bold italic uppercase tracking-wider text-white">
+                      {player.name}
+                    </div>
                   </div>
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -164,58 +164,58 @@ export default function FalconsSeason2025() {
       </section>
 
       {/* 4. COACH DETAILS */}
-      <section className="py-16 md:py-24 bg-[#F8F9FA] border-t border-brand-slate/5 overflow-hidden">
+      <section className="py-12 md:py-16 bg-[#F8F9FA] border-t border-brand-slate/5 overflow-hidden">
         <div className="max-w-[1200px] mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            
-            <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeUp}
-                className="relative order-2 lg:order-1"
-            >
-                <div className="aspect-square md:aspect-[4/5] overflow-hidden border-2 border-[#D32424] p-2 bg-white shadow-xl relative z-10">
-                    <img 
-                        src={dummyPlayerImg} 
-                        alt="John-Laffnie de Jager" 
-                        className="w-full h-full object-cover filter contrast-125"
-                    />
-                </div>
-                <div className="absolute -bottom-8 -left-8 text-9xl font-display font-black italic text-[#FFD500]/10 pointer-events-none z-0">
-                    COACH
-                </div>
-            </motion.div>
 
-            <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeUp}
-                className="order-1 lg:order-2"
-            >
-                <div className="text-sm font-bold tracking-widest uppercase text-[#D32424] mb-4 flex items-center gap-2">
-                    <Zap size={18} /> Head Coach
-                </div>
-                <h2 className="text-5xl font-display font-black italic uppercase text-brand-midnight mb-8">
-                    John-Laffnie de Jager
-                </h2>
-                <div className="space-y-6 text-brand-midnight/70 font-medium text-xl leading-relaxed">
-                    <p>
-                        The team continued under the guidance of head coach John-Laffnie de Jager, whose leadership ensured consistency and focus across the season.
-                    </p>
-                    <div className="p-6 bg-white border-l-4 border-[#FFD500] shadow-sm mt-8">
-                        <p className="font-display italic text-brand-midnight font-bold">
-                            "His ability to adapt strategies and manage a diverse lineup played an important role in sustaining the team’s competitive edge."
-                        </p>
-                    </div>
-                </div>
-            </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="relative order-2 lg:order-1"
+          >
+            <div className="aspect-square md:aspect-[4/5] overflow-hidden border-2 border-[#D32424] p-2 bg-white shadow-xl relative z-10">
+              <img
+                src={dummyPlayerImg}
+                alt="John-Laffnie de Jager"
+                className="w-full h-full object-cover filter contrast-125"
+              />
+            </div>
+            <div className="absolute -bottom-8 -left-8 text-9xl font-display font-black italic text-[#FFD500]/10 pointer-events-none z-0">
+              COACH
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="order-1 lg:order-2"
+          >
+            <div className="text-sm font-bold tracking-widest uppercase text-[#D32424] mb-4 flex items-center gap-2">
+              <Zap size={18} /> Head Coach
+            </div>
+            <h2 className="text-5xl font-display font-black italic uppercase text-brand-midnight mb-8">
+              John-Laffnie de Jager
+            </h2>
+            <div className="space-y-6 text-brand-midnight/70 font-medium text-xl leading-relaxed">
+              <p>
+                The team continued under the guidance of head coach John-Laffnie de Jager, whose leadership ensured consistency and focus across the season.
+              </p>
+              <div className="p-6 bg-white border-l-4 border-[#FFD500] shadow-sm mt-8">
+                <p className="font-display italic text-brand-midnight font-bold">
+                  "His ability to adapt strategies and manage a diverse lineup played an important role in sustaining the team’s competitive edge."
+                </p>
+              </div>
+            </div>
+          </motion.div>
 
         </div>
       </section>
 
       {/* 5. MEDIA GALLERY SECTION */}
-      <section className="py-16 md:py-24 bg-white relative border-t border-brand-slate/5">
+      <section className="py-12 md:py-16 bg-white relative border-t border-brand-slate/5">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
           <motion.div
             initial="hidden"
@@ -290,9 +290,9 @@ export default function FalconsSeason2025() {
 
       {/* 6. BACK NAVIGATION */}
       <section className="py-12 bg-[#F8F9FA] border-t border-brand-slate/10 flex justify-center">
-          <Link to="/teams/falcons" className="px-8 py-4 bg-[#D32424] text-white text-sm font-bold tracking-widest uppercase hover:bg-brand-midnight transition-colors shadow-md">
-              Back to Falcons
-          </Link>
+        <Link to="/teams/falcons" className="px-8 py-4 bg-[#D32424] text-white text-sm font-bold tracking-widest uppercase hover:bg-brand-midnight transition-colors shadow-md">
+          Back to Falcons
+        </Link>
       </section>
 
     </div>

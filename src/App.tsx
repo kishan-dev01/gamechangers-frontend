@@ -14,6 +14,9 @@ import Season2 from './pages/Season2';
 import Falcons from './pages/Falcons';
 import FalconsSeason2024 from './pages/FalconsSeason2024';
 import FalconsSeason2025 from './pages/FalconsSeason2025';
+import Lions from './pages/Lions';
+import LionsSeason2 from './pages/LionsSeason2';
+import LionsSeason3 from './pages/LionsSeason3';
 
 function App() {
   useEffect(() => {
@@ -55,6 +58,9 @@ function App() {
           <Route path="/teams/falcons" element={<Falcons />} />
           <Route path="/teams/falcons/season-2024" element={<FalconsSeason2024 />} />
           <Route path="/teams/falcons/season-2025" element={<FalconsSeason2025 />} />
+          <Route path="/teams/lions" element={<Lions />} />
+          <Route path="/teams/lions/season-2" element={<LionsSeason2 />} />
+          <Route path="/teams/lions/season-3" element={<LionsSeason3 />} />
         </Routes>
         <ContactFooter />
       </div>

@@ -58,7 +58,7 @@ export default function Navbar() {
               <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ${isScrolled ? 'bg-brand-midnight/95 border border-brand-slate/50' : 'bg-white/95 border border-brand-slate/10'} backdrop-blur-md shadow-[0_20px_40px_-5px_rgba(0,0,0,0.1)] overflow-hidden rounded-b-md`}>
                 <Link to="/teams/south-africa-champions" className={`block px-6 py-4 text-xs font-bold uppercase tracking-widest transition-colors ${isScrolled ? 'text-white hover:bg-brand-slate hover:text-brand-neon border-b border-brand-slate/50' : 'text-brand-midnight hover:bg-brand-kinetic hover:text-brand-neon border-b border-brand-slate/5'}`}>South Africa Champions</Link>
                 <Link to="/teams/falcons" className={`block px-6 py-4 text-xs font-bold uppercase tracking-widest transition-colors ${isScrolled ? 'text-white hover:bg-brand-slate hover:text-brand-neon' : 'text-brand-midnight hover:bg-brand-kinetic hover:text-brand-neon'}`}>Game Changers Falcons</Link>
-                <Link to="/#team-lions" className={`block px-6 py-4 text-xs font-bold uppercase tracking-widest transition-colors ${isScrolled ? 'text-white hover:bg-brand-slate hover:text-brand-neon' : 'text-brand-midnight hover:bg-brand-kinetic hover:text-brand-neon'}`}>Game Changers Lions</Link>
+                <Link to="/teams/lions" className={`block px-6 py-4 text-xs font-bold uppercase tracking-widest transition-colors ${isScrolled ? 'text-white hover:bg-brand-slate hover:text-brand-neon' : 'text-brand-midnight hover:bg-brand-kinetic hover:text-brand-neon'}`}>Game Changers Lions</Link>
               </div>
             </div>
 
@@ -134,6 +134,7 @@ export default function Navbar() {
                       >
                         <Link to="/teams/south-africa-champions" onClick={() => setMobileMenuOpen(false)} className="text-brand-midnight/70 font-bold uppercase tracking-widest text-xs block py-1">South Africa Champions</Link>
                         <Link to="/teams/falcons" onClick={() => setMobileMenuOpen(false)} className="text-brand-midnight/70 font-bold uppercase tracking-widest text-xs block py-1">Game Changers Falcons</Link>
+                        <Link to="/teams/lions" onClick={() => setMobileMenuOpen(false)} className="text-brand-midnight/70 font-bold uppercase tracking-widest text-xs block py-1">Game Changers Lions</Link>
                       </motion.div>
                     )}
                   </AnimatePresence>

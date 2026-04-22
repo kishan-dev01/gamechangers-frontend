@@ -138,7 +138,7 @@ export default function Falcons() {
       </section>
 
       {/* 3. SEASONS OVERVIEW OVERVIEW */}
-      <section className="py-16 md:py-24 bg-white relative border-y border-brand-slate/5">
+      <section className="py-12 md:py-16 bg-white relative border-y border-brand-slate/5">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#D32424]/5 to-transparent pointer-events-none" />
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
 
@@ -228,7 +228,7 @@ export default function Falcons() {
       </section>
 
       {/* 4. GALLERY SECTION */}
-      <section className="py-16 md:py-24 bg-[#F8F9FA] relative">
+      <section className="py-12 md:py-16 bg-[#F8F9FA] relative">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
           <motion.div
             initial="hidden"
