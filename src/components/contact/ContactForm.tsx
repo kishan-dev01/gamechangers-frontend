@@ -17,10 +17,10 @@ export default function ContactForm() {
       {/* Decorative accent */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-midnight via-brand-neon to-brand-gold" />
 
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 relative z-10">
-        
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-6 relative z-10">
+
         {/* Left: Contact Info */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -29,7 +29,7 @@ export default function ContactForm() {
         >
           <div className="mb-12">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black italic uppercase tracking-tighter text-brand-midnight mb-6 leading-none">
-              Partner with <br/> <span className="text-brand-slate">Game Changers</span>
+              Partner with <br /> <span className="text-brand-slate">Game Changers</span>
             </h2>
             <p className="text-lg md:text-xl text-brand-midnight/70 leading-relaxed font-medium max-w-lg">
               Whether you are an investor, an athlete, or a business looking to leverage our global sports IPs, our team is ready to collaborate.
@@ -74,16 +74,16 @@ export default function ContactForm() {
 
         {/* Right: Contact Form */}
         <motion.div
-           initial={{ opacity: 0, x: 30 }}
-           whileInView={{ opacity: 1, x: 0 }}
-           viewport={{ once: true }}
-           transition={{ duration: 0.6 }}
-           className="relative"
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="relative"
         >
-          <div className="bg-white p-8 md:p-12 lg:p-14 shadow-2xl border border-brand-slate/5 relative overflow-hidden">
+          <div className="bg-white p-8 md:p-12 lg:p-14 shadow-md border border-brand-slate/5 relative overflow-hidden">
             {/* abstract accent */}
             <div className="absolute top-0 right-0 w-1.5 h-full bg-brand-gold" />
-            
+
             <h3 className="text-2xl md:text-3xl font-display font-bold italic uppercase tracking-widest text-brand-midnight mb-8">
               Send a Message
             </h3>
@@ -132,7 +132,7 @@ export default function ContactForm() {
 
               <AnimatePresence>
                 {status === 'success' && (
-                  <motion.div 
+                  <motion.div
                     initial={{ opacity: 0, y: 10, height: 0 }}
                     animate={{ opacity: 1, y: 0, height: 'auto' }}
                     exit={{ opacity: 0, y: -10, height: 0 }}
@@ -154,7 +154,7 @@ export default function ContactForm() {
 function ChevronDownIcon() {
   return (
     <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M1 1L7 7L13 1" stroke="#0B162C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M1 1L7 7L13 1" stroke="#0B162C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }

@@ -165,7 +165,7 @@ export default function Gallery() {
           viewport={{ once: true, margin: "-50px" }}
           // Desktop: 12-column grid. Mobile: 1-column grid.
           // auto-rows handles the height scaling automatically.
-          className="grid grid-cols-1 md:grid-cols-12 auto-rows-[300px] md:auto-rows-[280px] gap-3 md:gap-5"
+          className="grid grid-cols-1 md:grid-cols-12 auto-rows-[300px] md:auto-rows-[280px] gap-3 md:gap-2.5"
         >
           {galleryImages.map((img, i) => (
             <GalleryItem key={i} {...img} />

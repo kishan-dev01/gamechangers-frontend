@@ -64,11 +64,6 @@ const Card = ({ card, i, progress, range, targetScale }: CardProps) => {
         {/* Left Content Half */}
         <div className="w-full md:w-1/2 p-8 md:p-16 flex flex-col justify-between bg-white z-10 relative group overflow-hidden">
 
-          {/* Ghost ID Text */}
-          {/* <div className="absolute -top-10 left-4 md:left-10 text-[15vw] md:text-[8vw] font-display font-bold text-brand-slate/5 select-none z-0">
-            {card.id}
-          </div> */}
-
           <div className="z-10 relative mt-10 md:mt-0">
             <h3 className="text-4xl md:text-5xl font-bold font-display italic uppercase mb-2 text-brand-midnight tracking-tighter">
               {card.title}
@@ -150,12 +145,6 @@ export default function GameChangersStats() {
           );
         })}
       </div>
-
-      {/* Bottom Puffer Section for Breathing Space */}
-      <div className="h-[20vh] bg-brand-kinetic w-full flex items-center justify-center relative z-10">
-        <div className="h-24 w-px bg-brand-midnight/20"></div>
-      </div>
-
     </section>
   );
 }

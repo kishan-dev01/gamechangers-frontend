@@ -68,13 +68,12 @@ export default function Navbar() {
                 Leagues <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
               </button>
               <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ${isScrolled ? 'bg-brand-midnight/95 border border-brand-slate/50' : 'bg-white/95 border border-brand-slate/10'} backdrop-blur-md shadow-[0_20px_40px_-5px_rgba(0,0,0,0.1)] overflow-hidden rounded-b-md`}>
-                <Link to="/seasons/season-1" className={`block px-6 py-4 text-xs font-bold uppercase tracking-widest transition-colors ${isScrolled ? 'text-white hover:bg-brand-slate hover:text-brand-neon border-b border-brand-slate/50' : 'text-brand-midnight hover:bg-brand-kinetic hover:text-brand-neon border-b border-brand-slate/5'}`}>Season 1</Link>
-                <Link to="/seasons/season-2" className={`block px-6 py-4 text-xs font-bold uppercase tracking-widest transition-colors ${isScrolled ? 'text-white hover:bg-brand-slate hover:text-brand-neon' : 'text-brand-midnight hover:bg-brand-kinetic hover:text-brand-neon'}`}>Season 2</Link>
+                <Link to="/leagues/korfball-premier-league" className={`block px-6 py-4 text-xs font-bold uppercase tracking-widest transition-colors ${isScrolled ? 'text-white hover:bg-brand-slate hover:text-brand-neon border-b border-brand-slate/50' : 'text-brand-midnight hover:bg-brand-kinetic hover:text-brand-neon border-b border-brand-slate/5'}`}>Korfball Premier League</Link>
               </div>
             </div>
 
             {/* <Link to="/#leadership" className={`text-xs xl:text-sm font-bold tracking-widest uppercase transition-colors duration-300 ${isScrolled ? 'text-white hover:text-brand-neon' : 'text-brand-midnight hover:text-brand-neon'}`}>Leadership</Link> */}
-            <Link to="/#media" className={`text-xs xl:text-sm font-bold tracking-widest uppercase transition-colors duration-300 ${isScrolled ? 'text-white hover:text-brand-neon' : 'text-brand-midnight hover:text-brand-neon'}`}>Media</Link>
+            {/* <Link to="/#media" className={`text-xs xl:text-sm font-bold tracking-widest uppercase transition-colors duration-300 ${isScrolled ? 'text-white hover:text-brand-neon' : 'text-brand-midnight hover:text-brand-neon'}`}>Media</Link> */}
           </div>
 
           {/* Divider */}
@@ -83,13 +82,13 @@ export default function Navbar() {
           {/* Utility + Business (Right) */}
           <div className="flex items-center gap-4 xl:gap-6">
             <Link to="/partners" className={`text-xs xl:text-sm font-bold tracking-widest uppercase transition-colors duration-300 ${isScrolled ? 'text-white hover:text-brand-neon' : 'text-brand-midnight hover:text-brand-neon'}`}>Partners</Link>
-            <Link to="/contact" className={`text-xs xl:text-sm font-bold tracking-widest uppercase transition-colors duration-300 ${isScrolled ? 'text-white hover:text-brand-neon' : 'text-brand-midnight hover:text-brand-neon'}`}>Contact</Link>
+            {/* <Link to="/contact" className={`text-xs xl:text-sm font-bold tracking-widest uppercase transition-colors duration-300 ${isScrolled ? 'text-white hover:text-brand-neon' : 'text-brand-midnight hover:text-brand-neon'}`}>Contact</Link> */}
 
             <Link
               to="/contact"
               className="px-6 py-3 ml-2 bg-brand-gold text-brand-midnight text-xs xl:text-sm font-extrabold tracking-widest uppercase hover:bg-brand-neon hover:neon-hover-glow transition-all whitespace-nowrap shadow-sm hover:shadow-md"
             >
-              Partner With Us
+              Contact With Us
             </Link>
           </div>
 
@@ -140,24 +139,23 @@ export default function Navbar() {
                   </AnimatePresence>
                 </div>
 
-                {/* Mobile Seasons Dropdown Accordion */}
+                {/* Mobile Leagues Dropdown Accordion */}
                 <div className="w-full text-center">
                   <button
-                    onClick={() => toggleDropdown('seasons')}
+                    onClick={() => toggleDropdown('leagues')}
                     className="text-2xl font-display font-bold italic uppercase text-brand-midnight hover:text-brand-neon transition-all flex items-center justify-center gap-2 mx-auto"
                   >
-                    Seasons <ChevronDown size={20} className={`transition-transform duration-300 ${activeDropdown === 'seasons' ? 'rotate-180' : ''}`} />
+                    Leagues <ChevronDown size={20} className={`transition-transform duration-300 ${activeDropdown === 'leagues' ? 'rotate-180' : ''}`} />
                   </button>
                   <AnimatePresence>
-                    {activeDropdown === 'seasons' && (
+                    {activeDropdown === 'leagues' && (
                       <motion.div
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: 'auto', opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         className="flex flex-col gap-4 mt-4 overflow-hidden"
                       >
-                        <Link to="/seasons/season-1" onClick={() => setMobileMenuOpen(false)} className="text-brand-midnight/70 font-bold uppercase tracking-widest text-xs block py-1">Season 1</Link>
-                        <Link to="/seasons/season-2" onClick={() => setMobileMenuOpen(false)} className="text-brand-midnight/70 font-bold uppercase tracking-widest text-xs block py-1">Season 2</Link>
+                        <Link to="/leagues/korfball-premier-league" onClick={() => setMobileMenuOpen(false)} className="text-brand-midnight/70 font-bold uppercase tracking-widest text-xs block py-1">Korfball Premier League</Link>
                       </motion.div>
                     )}
                   </AnimatePresence>

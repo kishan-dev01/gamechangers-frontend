@@ -9,8 +9,9 @@ import ContactUs from './pages/ContactUs';
 import AboutUs from './pages/AboutUs';
 import SouthAfricaChampions from './pages/SouthAfricaChampions';
 import Partners from './pages/Partners';
-import Season1 from './pages/Season1';
-import Season2 from './pages/Season2';
+import KorfballPremierLeague from './pages/KorfballPremierLeague';
+import SouthAfricaSeason1 from './pages/SouthAfricaSeason1';
+import SouthAfricaSeason2 from './pages/SouthAfricaSeason2';
 import Falcons from './pages/Falcons';
 import FalconsSeason2024 from './pages/FalconsSeason2024';
 import FalconsSeason2025 from './pages/FalconsSeason2025';
@@ -52,9 +53,10 @@ function App() {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/partners" element={<Partners />} />
-          <Route path="/seasons/season-1" element={<Season1 />} />
-          <Route path="/seasons/season-2" element={<Season2 />} />
+          <Route path="/leagues/korfball-premier-league" element={<KorfballPremierLeague />} />
           <Route path="/teams/south-africa-champions" element={<SouthAfricaChampions />} />
+          <Route path="/teams/south-africa-champions/season-1" element={<SouthAfricaSeason1 />} />
+          <Route path="/teams/south-africa-champions/season-2" element={<SouthAfricaSeason2 />} />
           <Route path="/teams/falcons" element={<Falcons />} />
           <Route path="/teams/falcons/season-2024" element={<FalconsSeason2024 />} />
           <Route path="/teams/falcons/season-2025" element={<FalconsSeason2025 />} />

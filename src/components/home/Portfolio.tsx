@@ -13,7 +13,7 @@ const portfolioItems = [
       'https://res.cloudinary.com/dtsuewnbj/image/upload/v1776165350/WT200303_uu5krp.jpg'
 
     ],
-    link: '#team-falcons',
+    link: '/teams/falcons',
     colSpan: 'md:col-span-2 lg:col-span-8',
     rowSpan: 'md:row-span-2 lg:row-span-2',
     height: 'h-[50vh] md:h-[60vh] lg:h-full'
@@ -28,7 +28,7 @@ const portfolioItems = [
       'https://res.cloudinary.com/dtsuewnbj/image/upload/v1776164365/lions-1_eqjkm3.webp',
       'https://res.cloudinary.com/dtsuewnbj/image/upload/v1776164365/lions-2_hf9nwq.webp'
     ],
-    link: '#team-lions',
+    link: '/teams/lions',
     colSpan: 'md:col-span-1 lg:col-span-4',
     rowSpan: 'md:row-span-1 lg:row-span-1',
     height: 'h-[40vh] md:h-full'
@@ -43,7 +43,7 @@ const portfolioItems = [
       'https://images.unsplash.com/photo-1607734834519-d8576ae60ea6?q=80&w=1357&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       'https://plus.unsplash.com/premium_photo-1722086350831-3cc30b7d68a7?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
     ],
-    link: '#team-sa-champions',
+    link: '/teams/south-africa-champions',
     colSpan: 'md:col-span-1 lg:col-span-4',
     rowSpan: 'md:row-span-1 lg:row-span-1',
     height: 'h-[40vh] md:h-full'
@@ -127,7 +127,7 @@ const PortfolioCard = ({ item, i }: { item: typeof portfolioItems[0]; i: number 
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="py-24 bg-brand-kinetic text-brand-midnight relative z-0">
+    <section id="portfolio" className="py-12 bg-brand-kinetic text-brand-midnight relative z-0">
       <div className="max-w-[1400px] mx-auto px-4 md:px-8">
 
         {/* Header - Cleaned up to solid without glowing gradients */}
@@ -135,20 +135,20 @@ export default function Portfolio() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          className="mb-16 md:mb-24 flex flex-col items-center text-center space-y-6"
+          className="mb-16 md:mb-16 flex flex-col items-center text-center space-y-6"
         >
-          <span className="text-brand-slate font-bold uppercase tracking-[0.2em] text-sm block">
+          <span className="text-brand-slate font-bold uppercase tracking-[0.2em] text-lg block">
             The Franchises
           </span>
-          <h2 className="text-4xl md:text-7xl font-display font-bold italic uppercase tracking-tighter text-brand-midnight">
+          {/* <h2 className="text-4xl md:text-7xl font-display font-bold italic uppercase tracking-tighter text-brand-midnight">
             The Greatest Show <br className="hidden md:block" />
             <span className="text-brand-gold">Beyond Boundaries</span>
-          </h2>
+          </h2> */}
           <div className="w-16 h-1 bg-brand-gold" />
         </motion.div>
 
         {/* Bento Grid layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4 auto-rows-min md:auto-rows-[400px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-1 auto-rows-min md:auto-rows-[400px]">
           {portfolioItems.map((item, i) => (
             <PortfolioCard key={item.id} item={item} i={i} />
           ))}
