@@ -7,6 +7,40 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [activeDesktopTeam, setActiveDesktopTeam] = useState<string | null>(null);
+
+  const teamsData = [
+    {
+      id: 'south-africa-champions',
+      name: 'South Africa Champions',
+      sport: 'Cricket',
+      mainLink: '/teams/south-africa-champions',
+      seasons: [
+        { name: 'Season 1', link: '/teams/south-africa-champions/season-1' },
+        { name: 'Season 2', link: '/teams/south-africa-champions/season-2' }
+      ]
+    },
+    {
+      id: 'falcons',
+      name: 'Game Changers Falcons',
+      sport: 'Tennis',
+      mainLink: '/teams/falcons',
+      seasons: [
+        { name: 'Season 2024', link: '/teams/falcons/season-2024' },
+        { name: 'Season 2025', link: '/teams/falcons/season-2025' }
+      ]
+    },
+    {
+      id: 'lions',
+      name: 'Game Changers Lions',
+      sport: 'Padel',
+      mainLink: '/teams/lions',
+      seasons: [
+        { name: 'Season 2', link: '/teams/lions/season-2' },
+        { name: 'Season 3', link: '/teams/lions/season-3' }
+      ]
+    }
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,14 +85,49 @@ export default function Navbar() {
             <Link to="/about" className={`text-xs xl:text-sm font-bold tracking-widest uppercase transition-colors duration-300 ${isScrolled ? 'text-white hover:text-brand-neon' : 'text-brand-midnight hover:text-brand-neon'}`}>About</Link>
 
             {/* Teams Dropdown */}
-            <div className="relative group py-2">
+            <div 
+              className="relative group py-2"
+              onMouseLeave={() => setActiveDesktopTeam(null)}
+            >
               <button className={`flex items-center gap-1 text-xs xl:text-sm font-bold tracking-widest uppercase transition-colors duration-300 ${isScrolled ? 'text-white hover:text-brand-neon' : 'text-brand-midnight hover:text-brand-neon'}`}>
                 Teams <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
               </button>
-              <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ${isScrolled ? 'bg-brand-midnight/95 border border-brand-slate/50' : 'bg-white/95 border border-brand-slate/10'} backdrop-blur-md shadow-[0_20px_40px_-5px_rgba(0,0,0,0.1)] overflow-hidden rounded-b-md`}>
-                <Link to="/teams/south-africa-champions" className={`block px-6 py-4 text-xs font-bold uppercase tracking-widest transition-colors ${isScrolled ? 'text-white hover:bg-brand-slate hover:text-brand-neon border-b border-brand-slate/50' : 'text-brand-midnight hover:bg-brand-kinetic hover:text-brand-neon border-b border-brand-slate/5'}`}>South Africa Champions</Link>
-                <Link to="/teams/falcons" className={`block px-6 py-4 text-xs font-bold uppercase tracking-widest transition-colors ${isScrolled ? 'text-white hover:bg-brand-slate hover:text-brand-neon' : 'text-brand-midnight hover:bg-brand-kinetic hover:text-brand-neon'}`}>Game Changers Falcons</Link>
-                <Link to="/teams/lions" className={`block px-6 py-4 text-xs font-bold uppercase tracking-widest transition-colors ${isScrolled ? 'text-white hover:bg-brand-slate hover:text-brand-neon' : 'text-brand-midnight hover:bg-brand-kinetic hover:text-brand-neon'}`}>Game Changers Lions</Link>
+              <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ${isScrolled ? 'bg-brand-midnight/95 border border-brand-slate/50' : 'bg-white/95 border border-brand-slate/10'} backdrop-blur-md shadow-[0_20px_40px_-5px_rgba(0,0,0,0.1)] overflow-hidden rounded-b-md`}>
+                {teamsData.map((team, idx) => (
+                  <div 
+                    key={team.id}
+                    onMouseEnter={() => setActiveDesktopTeam(team.id)}
+                    className={idx !== teamsData.length - 1 ? (isScrolled ? 'border-b border-brand-slate/50' : 'border-b border-brand-slate/5') : ''}
+                  >
+                    <Link to={team.mainLink} className={`block px-6 py-4 text-[11px] font-bold uppercase tracking-widest transition-colors ${isScrolled ? 'text-white hover:bg-brand-slate hover:text-brand-neon' : 'text-brand-midnight hover:bg-brand-kinetic hover:text-brand-neon'}`}>
+                      {team.name} <span className="text-[9px] opacity-70 normal-case ml-1">({team.sport})</span>
+                    </Link>
+                    <AnimatePresence>
+                      {activeDesktopTeam === team.id && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          className={`overflow-hidden ${isScrolled ? 'bg-black/20' : 'bg-black/5'} shadow-inner`}
+                        >
+                          {team.seasons.map(s => (
+                            <Link
+                              key={s.name}
+                              to={s.link}
+                              className={`block px-8 py-3 text-[10px] font-bold uppercase tracking-widest transition-colors ${
+                                isScrolled 
+                                  ? 'text-white/80 hover:text-brand-neon hover:bg-brand-slate/40' 
+                                  : 'text-brand-midnight/80 hover:text-brand-neon hover:bg-black/5'
+                              }`}
+                            >
+                              {s.name}
+                            </Link>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -131,9 +200,25 @@ export default function Navbar() {
                         exit={{ height: 0, opacity: 0 }}
                         className="flex flex-col gap-4 mt-4 overflow-hidden"
                       >
-                        <Link to="/teams/south-africa-champions" onClick={() => setMobileMenuOpen(false)} className="text-brand-midnight/70 font-bold uppercase tracking-widest text-xs block py-1">South Africa Champions</Link>
-                        <Link to="/teams/falcons" onClick={() => setMobileMenuOpen(false)} className="text-brand-midnight/70 font-bold uppercase tracking-widest text-xs block py-1">Game Changers Falcons</Link>
-                        <Link to="/teams/lions" onClick={() => setMobileMenuOpen(false)} className="text-brand-midnight/70 font-bold uppercase tracking-widest text-xs block py-1">Game Changers Lions</Link>
+                        {teamsData.map(team => (
+                          <div key={team.id} className="flex flex-col items-center">
+                            <Link to={team.mainLink} onClick={() => setMobileMenuOpen(false)} className="text-brand-midnight/90 font-bold uppercase tracking-widest text-[11px] block py-1 hover:text-brand-neon transition-colors">
+                              {team.name} <span className="text-[10px] normal-case opacity-70">({team.sport})</span>
+                            </Link>
+                            <div className="flex flex-col items-center mt-2 space-y-2 border-l border-brand-midnight/10 pl-2">
+                              {team.seasons.map(s => (
+                                <Link 
+                                  key={s.name} 
+                                  to={s.link} 
+                                  onClick={() => setMobileMenuOpen(false)} 
+                                  className="text-brand-midnight/60 font-bold uppercase tracking-wider text-[10px] hover:text-brand-neon transition-colors"
+                                >
+                                  {s.name}
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
+                        ))}
                       </motion.div>
                     )}
                   </AnimatePresence>
