@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
+  const location = useLocation();
+  const isTeamPage = location.pathname.startsWith('/teams');
+
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -81,15 +84,15 @@ export default function Navbar() {
 
           {/* Main Navigation (Center) */}
           <div className="flex items-center gap-4 xl:gap-8">
-            <Link to="/" className={`text-xs xl:text-sm font-bold tracking-widest uppercase transition-colors duration-300 ${isScrolled ? 'text-white hover:text-brand-neon' : 'text-brand-midnight hover:text-brand-neon'}`}>Home</Link>
-            <Link to="/about" className={`text-xs xl:text-sm font-bold tracking-widest uppercase transition-colors duration-300 ${isScrolled ? 'text-white hover:text-brand-neon' : 'text-brand-midnight hover:text-brand-neon'}`}>About</Link>
+            <Link to="/" className={`text-xs xl:text-sm font-bold tracking-widest uppercase transition-colors duration-300 ${isScrolled || isTeamPage ? 'text-white hover:text-brand-neon' : 'text-brand-midnight hover:text-brand-neon'}`}>Home</Link>
+            <Link to="/about" className={`text-xs xl:text-sm font-bold tracking-widest uppercase transition-colors duration-300 ${isScrolled || isTeamPage ? 'text-white hover:text-brand-neon' : 'text-brand-midnight hover:text-brand-neon'}`}>About</Link>
 
             {/* Teams Dropdown */}
             <div 
               className="relative group py-2"
               onMouseLeave={() => setActiveDesktopTeam(null)}
             >
-              <button className={`flex items-center gap-1 text-xs xl:text-sm font-bold tracking-widest uppercase transition-colors duration-300 ${isScrolled ? 'text-white hover:text-brand-neon' : 'text-brand-midnight hover:text-brand-neon'}`}>
+              <button className={`flex items-center gap-1 text-xs xl:text-sm font-bold tracking-widest uppercase transition-colors duration-300 ${isScrolled || isTeamPage ? 'text-white hover:text-brand-neon' : 'text-brand-midnight hover:text-brand-neon'}`}>
                 Teams <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
               </button>
               <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ${isScrolled ? 'bg-brand-midnight/95 border border-brand-slate/50' : 'bg-white/95 border border-brand-slate/10'} backdrop-blur-md shadow-[0_20px_40px_-5px_rgba(0,0,0,0.1)] overflow-hidden rounded-b-md`}>
@@ -133,7 +136,7 @@ export default function Navbar() {
 
             {/* Leagues Dropdown */}
             <div className="relative group py-2">
-              <button className={`flex items-center gap-1 text-xs xl:text-sm font-bold tracking-widest uppercase transition-colors duration-300 ${isScrolled ? 'text-white hover:text-brand-neon' : 'text-brand-midnight hover:text-brand-neon'}`}>
+              <button className={`flex items-center gap-1 text-xs xl:text-sm font-bold tracking-widest uppercase transition-colors duration-300 ${isScrolled || isTeamPage ? 'text-white hover:text-brand-neon' : 'text-brand-midnight hover:text-brand-neon'}`}>
                 Leagues <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
               </button>
               <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ${isScrolled ? 'bg-brand-midnight/95 border border-brand-slate/50' : 'bg-white/95 border border-brand-slate/10'} backdrop-blur-md shadow-[0_20px_40px_-5px_rgba(0,0,0,0.1)] overflow-hidden rounded-b-md`}>
@@ -141,8 +144,8 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* <Link to="/#leadership" className={`text-xs xl:text-sm font-bold tracking-widest uppercase transition-colors duration-300 ${isScrolled ? 'text-white hover:text-brand-neon' : 'text-brand-midnight hover:text-brand-neon'}`}>Leadership</Link> */}
-            {/* <Link to="/#media" className={`text-xs xl:text-sm font-bold tracking-widest uppercase transition-colors duration-300 ${isScrolled ? 'text-white hover:text-brand-neon' : 'text-brand-midnight hover:text-brand-neon'}`}>Media</Link> */}
+            {/* <Link to="/#leadership" className={`text-xs xl:text-sm font-bold tracking-widest uppercase transition-colors duration-300 ${isScrolled || isTeamPage ? 'text-white hover:text-brand-neon' : 'text-brand-midnight hover:text-brand-neon'}`}>Leadership</Link> */}
+            {/* <Link to="/#media" className={`text-xs xl:text-sm font-bold tracking-widest uppercase transition-colors duration-300 ${isScrolled || isTeamPage ? 'text-white hover:text-brand-neon' : 'text-brand-midnight hover:text-brand-neon'}`}>Media</Link> */}
           </div>
 
           {/* Divider */}
@@ -150,8 +153,8 @@ export default function Navbar() {
 
           {/* Utility + Business (Right) */}
           <div className="flex items-center gap-4 xl:gap-6">
-            <Link to="/partners" className={`text-xs xl:text-sm font-bold tracking-widest uppercase transition-colors duration-300 ${isScrolled ? 'text-white hover:text-brand-neon' : 'text-brand-midnight hover:text-brand-neon'}`}>Partners</Link>
-            {/* <Link to="/contact" className={`text-xs xl:text-sm font-bold tracking-widest uppercase transition-colors duration-300 ${isScrolled ? 'text-white hover:text-brand-neon' : 'text-brand-midnight hover:text-brand-neon'}`}>Contact</Link> */}
+            <Link to="/partners" className={`text-xs xl:text-sm font-bold tracking-widest uppercase transition-colors duration-300 ${isScrolled || isTeamPage ? 'text-white hover:text-brand-neon' : 'text-brand-midnight hover:text-brand-neon'}`}>Partners</Link>
+            {/* <Link to="/contact" className={`text-xs xl:text-sm font-bold tracking-widest uppercase transition-colors duration-300 ${isScrolled || isTeamPage ? 'text-white hover:text-brand-neon' : 'text-brand-midnight hover:text-brand-neon'}`}>Contact</Link> */}
 
             <Link
               to="/contact"
@@ -165,7 +168,7 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <button
-          className={`lg:hidden z-50 p-2 transition-colors duration-300 ${isScrolled && !mobileMenuOpen ? 'text-white' : 'text-brand-midnight'}`}
+          className={`lg:hidden z-50 p-2 transition-colors duration-300 ${(isScrolled || isTeamPage) && !mobileMenuOpen ? 'text-white' : 'text-brand-midnight'}`}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
