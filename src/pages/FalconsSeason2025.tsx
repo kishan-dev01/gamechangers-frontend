@@ -30,21 +30,48 @@ export default function FalconsSeason2025() {
     { name: "Sahaja Yamalapalli", image: "https://images.unsplash.com/photo-1625296839395-5ac8490a187a?q=80&w=2574&auto=format&fit=crop" },
   ];
 
-  // Gallery dummy images for the season
-  const galleryImages = Array.from({ length: 6 }).map((_, i) =>
-    `https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?q=80&w=2674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&sig=${i + 20}`
-  );
+  // Gallery dummy images for the season, matching Lions 7-image bento layout
+  const galleryImages = [
+    {
+      src: `https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?q=80&w=2674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&sig=20`,
+      gridClasses: "col-span-1 md:col-span-8 row-span-1 md:row-span-2",
+    },
+    {
+      src: `https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?q=80&w=2674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&sig=21`,
+      gridClasses: "col-span-1 md:col-span-4 row-span-1 md:row-span-1",
+    },
+    {
+      src: `https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?q=80&w=2674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&sig=22`,
+      gridClasses: "col-span-1 md:col-span-4 row-span-1 md:row-span-1",
+    },
+    {
+      src: `https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?q=80&w=2674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&sig=23`,
+      gridClasses: "col-span-1 md:col-span-4 row-span-1 md:row-span-2",
+    },
+    {
+      src: `https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?q=80&w=2674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&sig=24`,
+      gridClasses: "col-span-1 md:col-span-4 row-span-1 md:row-span-1",
+    },
+    {
+      src: `https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?q=80&w=2674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&sig=25`,
+      gridClasses: "col-span-1 md:col-span-4 row-span-1 md:row-span-1",
+    },
+    {
+      src: `https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?q=80&w=2674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&sig=26`,
+      gridClasses: "col-span-1 md:col-span-8 row-span-1 md:row-span-1",
+    },
+  ];
 
   return (
-    <div className="bg-[#F8F9FA] min-h-screen text-brand-midnight font-sans overflow-hidden">
+    <div className="bg-[#720b0b] min-h-screen text-white font-sans overflow-hidden">
 
       {/* 1. HERO SECTION */}
       <section className="relative min-h-[70dvh] flex flex-col items-center justify-center overflow-hidden pt-32 pb-12">
-        <div className="absolute inset-0 pointer-events-none z-0 bg-white">
+        <div className="absolute inset-0 pointer-events-none z-0">
           <motion.div
             animate={{ scale: [1, 1.1, 1], opacity: [0.15, 0.25, 0.15] }}
             transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -top-[10%] -left-[10%] w-[60vw] h-[60vw] rounded-full blur-[100px] bg-[#D32424]"
+            className="absolute -top-[10%] -left-[10%] w-[60vw] h-[60vw] rounded-full blur-[100px] bg-[#D32424]/40"
           />
         </div>
 
@@ -55,7 +82,7 @@ export default function FalconsSeason2025() {
             transition={{ duration: 1, ease: "easeOut" }}
             className="mb-8"
           >
-            <div className="inline-block px-6 py-2 border-2 border-[#D32424] rounded-none text-[#D32424] font-bold tracking-widest uppercase bg-[#D32424]/10 backdrop-blur-sm shadow-sm md:text-lg">
+            <div className="inline-block px-6 py-2 border-2 border-[#FFD500] rounded-none text-[#FFD500] font-bold tracking-widest uppercase bg-[#FFD500]/10 backdrop-blur-sm shadow-sm md:text-lg">
               Bengaluru
             </div>
           </motion.div>
@@ -64,16 +91,16 @@ export default function FalconsSeason2025() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-            className="text-5xl md:text-8xl font-display font-black uppercase italic tracking-tighter text-brand-midnight mb-6 mix-blend-multiply"
+            className="text-5xl md:text-8xl font-display font-black uppercase italic tracking-tighter text-white mb-6 mix-blend-multiply"
           >
-            2025 <span className="text-[#D32424] drop-shadow-sm">Season</span>
+            2025 <span className="text-[#FFD500] drop-shadow-sm">Season</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="text-xl md:text-3xl font-bold tracking-widest uppercase text-brand-slate mb-8 px-4"
+            className="text-xl md:text-3xl font-bold tracking-widest uppercase text-white/70 mb-8 px-4"
           >
             A Global Platform
           </motion.p>
@@ -88,7 +115,7 @@ export default function FalconsSeason2025() {
       </section>
 
       {/* 2. SEASON OVERVIEW */}
-      <section className="py-12 md:py-16 relative z-10 bg-[#F8F9FA] border-t border-brand-slate/5">
+      <section className="py-12 md:py-16 relative z-10 bg-[#5A0808] border-t border-white/5">
         <div className="max-w-[1200px] mx-auto px-6 md:px-12 text-center">
           <motion.div
             initial="hidden"
@@ -96,17 +123,17 @@ export default function FalconsSeason2025() {
             viewport={{ once: true }}
             variants={fadeUp}
           >
-            <h2 className="text-4xl md:text-5xl font-display font-bold italic uppercase tracking-tight mb-8 text-brand-midnight">
-              Season 4 of the <span className="text-[#D32424] underline decoration-[#D32424]/40 underline-offset-8">Tournament</span>
+            <h2 className="text-4xl md:text-5xl font-display font-bold italic uppercase tracking-tight mb-8 text-white">
+              Season 4 of the <span className="text-[#FFD500] underline decoration-[#FFD500]/40 underline-offset-8">Tournament</span>
             </h2>
-            <div className="space-y-6 text-brand-midnight/80 text-xl leading-relaxed font-medium max-w-4xl mx-auto">
+            <div className="space-y-6 text-white/80 text-xl leading-relaxed font-medium max-w-4xl mx-auto">
               <p>
                 The 2025 season of the World Tennis League, held in Bengaluru, marked Season 4 of the tournament and brought together some of the top international tennis stars for another exciting and competitive edition.
               </p>
               <p>
                 In a significant step forward, the league also featured Indian players in every team for the first time, providing them with a global platform to compete alongside some of the biggest names in the sport.
               </p>
-              <p className="border-l-4 border-[#FFD500] pl-6 text-left py-2 font-bold text-brand-midnight bg-white p-6 shadow-sm">
+              <p className="border-l-4 border-[#FFD500] pl-6 text-left py-2 font-bold text-white bg-[#8c1212] p-6 shadow-sm">
                 Building on their successful debut season, Game Changers Falcons entered the tournament with strong momentum and confidence. The team once again showcased a competitive edge and strong synergy, continuing to establish themselves as a consistent and formidable presence in the league.
               </p>
             </div>
@@ -115,7 +142,7 @@ export default function FalconsSeason2025() {
       </section>
 
       {/* 3. THE SQUAD */}
-      <section className="py-12 md:py-16 bg-white relative">
+      <section className="py-12 md:py-16 bg-[#720b0b] relative">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
 
           <motion.div
@@ -125,8 +152,8 @@ export default function FalconsSeason2025() {
             variants={fadeUp}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-display font-black uppercase italic tracking-tight mb-4 text-brand-midnight">The <span className="text-[#D32424]">Squad</span></h2>
-            <p className="text-xl text-brand-slate font-medium max-w-3xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-display font-black uppercase italic tracking-tight mb-4 text-white">The <span className="text-[#FFD500]">Squad</span></h2>
+            <p className="text-xl text-white/70 font-medium max-w-3xl mx-auto">
               A diverse lineup showcasing competitive edge and strong synergy.
             </p>
           </motion.div>
@@ -140,8 +167,8 @@ export default function FalconsSeason2025() {
           >
             {squad.map((player, idx) => (
               <motion.div key={idx} variants={fadeUp} className="group cursor-default">
-                <div className="aspect-[3/4] relative overflow-hidden bg-[#F8F9FA] border border-brand-slate/10 shadow-sm mb-6">
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-midnight/90 via-transparent to-transparent z-10 opacity-60 group-hover:opacity-80 transition-opacity" />
+                <div className="aspect-[3/4] relative overflow-hidden bg-[#5A0808] border border-white/10 shadow-sm mb-6">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#720b0b]/90 via-transparent to-transparent z-10 opacity-60 group-hover:opacity-80 transition-opacity" />
                   <img
                     src={player.image}
                     alt={player.name}
@@ -164,7 +191,7 @@ export default function FalconsSeason2025() {
       </section>
 
       {/* 4. COACH DETAILS */}
-      <section className="py-12 md:py-16 bg-[#F8F9FA] border-t border-brand-slate/5 overflow-hidden">
+      <section className="py-12 md:py-16 bg-[#5A0808] border-t border-white/5 overflow-hidden">
         <div className="max-w-[1200px] mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
           <motion.div
@@ -174,7 +201,7 @@ export default function FalconsSeason2025() {
             variants={fadeUp}
             className="relative order-2 lg:order-1"
           >
-            <div className="aspect-square md:aspect-[4/5] overflow-hidden border-2 border-[#D32424] p-2 bg-white shadow-xl relative z-10">
+            <div className="aspect-square md:aspect-[4/5] overflow-hidden border-2 border-[#FFD500] p-2 bg-[#8c1212] shadow-xl relative z-10">
               <img
                 src={dummyPlayerImg}
                 alt="John-Laffnie de Jager"
@@ -193,18 +220,18 @@ export default function FalconsSeason2025() {
             variants={fadeUp}
             className="order-1 lg:order-2"
           >
-            <div className="text-sm font-bold tracking-widest uppercase text-[#D32424] mb-4 flex items-center gap-2">
+            <div className="text-sm font-bold tracking-widest uppercase text-[#FFD500] mb-4 flex items-center gap-2">
               <Zap size={18} /> Head Coach
             </div>
-            <h2 className="text-5xl font-display font-black italic uppercase text-brand-midnight mb-8">
+            <h2 className="text-5xl font-display font-black italic uppercase text-white mb-8">
               John-Laffnie de Jager
             </h2>
-            <div className="space-y-6 text-brand-midnight/70 font-medium text-xl leading-relaxed">
+            <div className="space-y-6 text-white/70 font-medium text-xl leading-relaxed">
               <p>
                 The team continued under the guidance of head coach John-Laffnie de Jager, whose leadership ensured consistency and focus across the season.
               </p>
-              <div className="p-6 bg-white border-l-4 border-[#FFD500] shadow-sm mt-8">
-                <p className="font-display italic text-brand-midnight font-bold">
+              <div className="p-6 bg-[#8c1212] border-l-4 border-[#FFD500] shadow-sm mt-8">
+                <p className="font-display italic text-white font-bold">
                   "His ability to adapt strategies and manage a diverse lineup played an important role in sustaining the team’s competitive edge."
                 </p>
               </div>
@@ -215,7 +242,7 @@ export default function FalconsSeason2025() {
       </section>
 
       {/* 5. MEDIA GALLERY SECTION */}
-      <section className="py-12 md:py-16 bg-white relative border-t border-brand-slate/5">
+      <section className="py-12 md:py-16 bg-[#720b0b] relative border-t border-white/5">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
           <motion.div
             initial="hidden"
@@ -224,8 +251,8 @@ export default function FalconsSeason2025() {
             variants={fadeUp}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-display font-black uppercase italic tracking-tight mb-4 text-brand-midnight">Season <span className="text-[#D32424]">Highlights</span></h2>
-            <p className="text-xl text-brand-slate uppercase tracking-widest font-bold">Media Gallery</p>
+            <h2 className="text-4xl md:text-5xl font-display font-black uppercase italic tracking-tight mb-4 text-white">Season <span className="text-[#FFD500]">Highlights</span></h2>
+            <p className="text-xl text-white/70 uppercase tracking-widest font-bold">Media Gallery</p>
           </motion.div>
 
           <motion.div
@@ -233,21 +260,21 @@ export default function FalconsSeason2025() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
-            className="grid grid-cols-2 md:grid-cols-3 gap-4"
+            className="grid grid-cols-1 md:grid-cols-12 auto-rows-[300px] md:auto-rows-[280px] gap-3 md:gap-1"
           >
-            {galleryImages.map((src, idx) => (
+            {galleryImages.map((img, i) => (
               <motion.div
-                key={idx}
+                key={i}
                 variants={fadeUp}
-                className={`relative overflow-hidden rounded-none cursor-pointer group aspect-square shadow-sm hover:shadow-xl transition-shadow ${idx === 2 || idx === 5 ? 'md:col-span-2 md:row-span-2 aspect-auto' : ''}`}
-                onClick={() => setSelectedImage(src)}
+                onClick={() => setSelectedImage(img.src)}
+                className={`relative w-full h-full overflow-hidden group cursor-zoom-in bg-[#5A0808] border border-white/10 shadow-sm hover:shadow-md transition-shadow ${img.gridClasses}`}
               >
-                <div className="absolute inset-0 bg-brand-midnight/10 group-hover:bg-[#D32424]/10 transition-colors duration-500 z-10" />
                 <img
-                  src={src}
-                  alt={`Season Gallery view ${idx + 1}`}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 min-h-full"
+                  src={img.src}
+                  alt={`Season Gallery view ${i + 1}`}
+                  className="w-full h-full object-cover transition-transform duration-[800ms] ease-out group-hover:scale-105"
                 />
+                <div className="absolute inset-0 bg-[#5A0808]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </motion.div>
             ))}
           </motion.div>
@@ -262,7 +289,7 @@ export default function FalconsSeason2025() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setSelectedImage(null)}
-            className="fixed inset-0 z-[100] flex items-center justify-center bg-brand-midnight/95 backdrop-blur-xl p-4 md:p-12 cursor-zoom-out"
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-[#5A0808]/95 backdrop-blur-xl p-4 md:p-12 cursor-zoom-out"
           >
             <button
               onClick={() => setSelectedImage(null)}
@@ -289,8 +316,8 @@ export default function FalconsSeason2025() {
       </AnimatePresence>
 
       {/* 6. BACK NAVIGATION */}
-      <section className="py-12 bg-[#F8F9FA] border-t border-brand-slate/10 flex justify-center">
-        <Link to="/teams/falcons" className="px-8 py-4 bg-[#D32424] text-white text-sm font-bold tracking-widest uppercase hover:bg-brand-midnight transition-colors shadow-md">
+      <section className="py-12 bg-[#5A0808] border-t border-white/10 flex justify-center">
+        <Link to="/teams/falcons" className="px-8 py-4 bg-white text-[#720b0b] text-sm font-bold tracking-widest uppercase hover:bg-[#FFD500] transition-colors shadow-md">
           Back to Falcons
         </Link>
       </section>

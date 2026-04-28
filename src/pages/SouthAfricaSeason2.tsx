@@ -77,9 +77,9 @@ export default function SouthAfricaSeason2() {
   ];
 
   return (
-    <div className="bg-[#FFFFFF] min-h-screen text-[#0B4A34] font-sans overflow-hidden w-full">
+    <div className="bg-[#062B1E] min-h-screen text-white font-sans overflow-hidden w-full">
       {/* 1. HERO SECTION */}
-      <section className="relative min-h-[100vh] flex flex-col items-center justify-center overflow-hidden pt-24 pb-12 bg-white">
+      <section className="relative min-h-[100vh] flex flex-col items-center justify-center overflow-hidden pt-24 pb-12 bg-[#062B1E]">
         <div className="absolute inset-0 pointer-events-none z-0">
           <motion.div
             animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.2, 0.1] }}
@@ -89,7 +89,7 @@ export default function SouthAfricaSeason2() {
           <motion.div
             animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.4, 0.2] }}
             transition={{ duration: 20, repeat: Infinity, ease: "easeInOut", delay: 5 }}
-            className="absolute bottom-[0%] -right-[10%] w-[40vw] h-[40vw] rounded-full blur-[100px] bg-[#E5E7EB]"
+            className="absolute bottom-[0%] -right-[10%] w-[40vw] h-[40vw] rounded-full blur-[100px] bg-[#093D2A]"
           />
         </div>
 
@@ -106,7 +106,7 @@ export default function SouthAfricaSeason2() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-            className="text-6xl md:text-8xl lg:text-9xl font-display font-black uppercase italic tracking-tighter text-[#0B4A34] mb-6 mix-blend-multiply leading-none drop-shadow-sm"
+            className="text-6xl md:text-8xl lg:text-9xl font-display font-black uppercase italic tracking-tighter text-white mb-6 mix-blend-multiply leading-none drop-shadow-sm"
           >
             Season 2
           </motion.h1>
@@ -122,7 +122,7 @@ export default function SouthAfricaSeason2() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="text-lg md:text-2xl font-medium text-slate-500 max-w-4xl"
+            className="text-lg md:text-2xl font-medium text-white/70 max-w-4xl"
           >
             A defining chapter marked by dominance, consistency, and a relentless pursuit of excellence—culminating in a historic title-winning campaign.
           </motion.p>
@@ -130,7 +130,7 @@ export default function SouthAfricaSeason2() {
       </section>
 
       {/* 2. OVERVIEW */}
-      <section className="py-12 md:py-16 relative z-10 bg-[#E5E7EB] border-t border-slate-200">
+      <section className="py-12 md:py-16 relative z-10 bg-[#093D2A] border-t border-white/10">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -139,16 +139,16 @@ export default function SouthAfricaSeason2() {
             transition={{ duration: 0.8 }}
             className="relative order-2 lg:order-1"
           >
-            <div className="aspect-[4/3] relative overflow-hidden bg-white border border-slate-200 shadow-2xl rounded-none">
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#0B4A34]/60 to-transparent z-10 mix-blend-multiply" />
+            <div className="aspect-[4/3] relative overflow-hidden bg-[#062B1E] border border-white/10 shadow-2xl rounded-none">
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#062B1E]/90 to-transparent z-10 mix-blend-multiply" />
               <img
                 src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=2690&auto=format&fit=crop"
                 alt="Sports Stadium"
                 className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 hover:scale-105 transition-all duration-700"
               />
-              <div className="absolute bottom-8 left-8 z-20 bg-[#FFFFFF]/95 backdrop-blur-md p-6 border-l-4 border-[#F5C440] shadow-lg">
+              <div className="absolute bottom-8 left-8 z-20 bg-[#062B1E]/95 backdrop-blur-md p-6 border-l-4 border-[#F5C440] shadow-lg">
                 <div className="text-3xl font-display font-black italic text-[#F5C440] mb-1">EVOLUTION</div>
-                <div className="text-sm font-bold tracking-widest uppercase text-[#0B4A34]">Higher Stakes, Stronger Competition</div>
+                <div className="text-sm font-bold tracking-widest uppercase text-white">Higher Stakes, Stronger Competition</div>
               </div>
             </div>
           </motion.div>
@@ -161,10 +161,10 @@ export default function SouthAfricaSeason2() {
             className="order-1 lg:order-2"
           >
             <div className="text-sm font-bold uppercase tracking-widest text-[#F5C440] mb-4">Overview</div>
-            <h2 className="text-4xl md:text-5xl font-display font-bold italic uppercase tracking-tight mb-8 text-[#0B4A34]">
+            <h2 className="text-4xl md:text-5xl font-display font-bold italic uppercase tracking-tight mb-8 text-white">
               The <span className="text-[#F5C440] underline decoration-[#F5C440]/40 underline-offset-8">Breakthrough</span> Moment
             </h2>
-            <div className="space-y-6 text-[#0B4A34]/80 text-lg leading-relaxed font-medium mb-10">
+            <div className="space-y-6 text-white/80 text-lg leading-relaxed font-medium mb-10">
               <p>
                 Season 2 represented a breakthrough moment in the evolution of the Game Changers ecosystem.
               </p>
@@ -172,8 +172,8 @@ export default function SouthAfricaSeason2() {
                 With stronger competition, rising global attention, and higher stakes, the season showcased the true potential of franchise-based sports at a global level. It was a season where performance met precision, and excellence translated into results on the biggest stage.
               </p>
             </div>
-            <div className="p-6 bg-white border border-[#F5C440]/30 shadow-sm border-l-4 border-l-[#F5C440]">
-              <p className="font-display italic text-xl font-bold text-[#0B4A34]">
+            <div className="p-6 bg-[#062B1E] border border-[#F5C440]/30 shadow-sm border-l-4 border-l-[#F5C440]">
+              <p className="font-display italic text-xl font-bold text-white">
                 "At the heart of it all was a team that defined the season—South Africa Champions."
               </p>
             </div>
@@ -182,7 +182,7 @@ export default function SouthAfricaSeason2() {
       </section>
 
       {/* 3. THE CHAMPIONSHIP RUN */}
-      <section className="py-12 md:py-16 bg-[#0B4A34] text-white relative overflow-hidden border-y-8 border-[#F5C440]">
+      <section className="py-12 md:py-16 bg-[#093D2A] text-white relative overflow-hidden border-y-8 border-[#F5C440]">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#F5C440]/10 rounded-full blur-[120px] pointer-events-none transform translate-x-1/3 -translate-y-1/3" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-white/5 rounded-full blur-[100px] pointer-events-none transform -translate-x-1/4 translate-y-1/4" />
 
@@ -225,7 +225,7 @@ export default function SouthAfricaSeason2() {
                 variants={fadeUp}
                 className="bg-white/5 border border-[#F5C440]/20 hover:border-[#F5C440] p-8 rounded-none transition-all duration-300 group flex flex-col items-center text-center"
               >
-                <div className="w-16 h-16 mx-auto bg-[#F5C440]/10 text-[#F5C440] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform group-hover:bg-[#F5C440] group-hover:text-[#0B4A34] rounded-none">
+                <div className="w-16 h-16 mx-auto bg-[#F5C440]/10 text-[#F5C440] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform group-hover:bg-[#F5C440] group-hover:text-white rounded-none">
                   {item.icon}
                 </div>
                 <h3 className="text-xl font-bold uppercase tracking-wider text-white group-hover:text-[#F5C440] transition-colors">{item.title}</h3>
@@ -245,7 +245,7 @@ export default function SouthAfricaSeason2() {
       </section>
 
       {/* 4. ROAD TO THE TITLE */}
-      <section className="py-12 md:py-16 bg-[#E5E7EB] relative border-t border-slate-200">
+      <section className="py-12 md:py-16 bg-[#093D2A] relative border-t border-white/10">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10 text-center">
           <motion.div
             initial="hidden"
@@ -254,10 +254,10 @@ export default function SouthAfricaSeason2() {
             variants={fadeUp}
             className="mb-16"
           >
-            <h2 className="text-4xl md:text-6xl font-display font-black uppercase italic tracking-tight mb-6 text-[#0B4A34]">
+            <h2 className="text-4xl md:text-6xl font-display font-black uppercase italic tracking-tight mb-6 text-white">
               Road To The <span className="text-[#F5C440]">Title</span>
             </h2>
-            <p className="text-xl text-slate-500 font-medium max-w-3xl mx-auto">
+            <p className="text-xl text-white/70 font-medium max-w-3xl mx-auto">
               The journey to the title was marked by high-intensity matchups and decisive performances at crucial moments.
             </p>
           </motion.div>
@@ -267,17 +267,17 @@ export default function SouthAfricaSeason2() {
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-[#FFFFFF] border border-slate-200 p-10 w-full shadow-sm hover:shadow-md transition-shadow relative"
+              className="bg-[#062B1E] border border-white/10 p-10 w-full shadow-sm hover:shadow-md transition-shadow relative"
             >
-              <div className="absolute top-0 right-0 p-4 opacity-5 pointer-events-none text-[#0B4A34]">
+              <div className="absolute top-0 right-0 p-4 opacity-5 pointer-events-none text-white">
                 <Trophy size={100} />
               </div>
-              <div className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-4">Semi-Final (31 July)</div>
-              <h3 className="text-3xl font-display font-black italic uppercase text-[#0B4A34]">Victory vs Australia</h3>
+              <div className="text-sm font-bold uppercase tracking-widest text-white/70 mb-4">Semi-Final (31 July)</div>
+              <h3 className="text-3xl font-display font-black italic uppercase text-white">Victory vs Australia</h3>
             </motion.div>
 
             <div className="hidden md:block w-px h-32 bg-[#F5C440]/30 shrink-0 relative">
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#E5E7EB] px-2 text-[#F5C440]">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#093D2A] px-2 text-[#F5C440]">
                 <Zap size={24} />
               </div>
             </div>
@@ -292,7 +292,7 @@ export default function SouthAfricaSeason2() {
                 <Crown size={100} />
               </div>
               <div className="text-sm font-bold uppercase tracking-widest text-[#F5C440] mb-4">Final (1 August)</div>
-              <h3 className="text-3xl font-display font-black italic uppercase text-[#0B4A34]">Victory vs Pakistan</h3>
+              <h3 className="text-3xl font-display font-black italic uppercase text-white">Victory vs Pakistan</h3>
             </motion.div>
           </div>
 
@@ -300,7 +300,7 @@ export default function SouthAfricaSeason2() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-lg md:text-xl text-[#0B4A34]/80 font-bold bg-white border border-slate-200 py-6 px-8 inline-block shadow-[inset_0_0_20px_rgba(0,0,0,0.02)]"
+            className="text-lg md:text-xl text-white/80 font-bold bg-[#062B1E] border border-white/10 py-6 px-8 inline-block shadow-[inset_0_0_20px_rgba(0,0,0,0.02)]"
           >
             Delivering under pressure, the team rose to the occasion when it mattered most—securing the championship in commanding fashion.
           </motion.div>
@@ -308,7 +308,7 @@ export default function SouthAfricaSeason2() {
       </section>
 
       {/* 5. SQUAD & HEAD COACH GIRD */}
-      <section className="py-12 md:py-16 bg-[#FFFFFF] relative border-t border-slate-200">
+      <section className="py-12 md:py-16 bg-[#062B1E] relative border-t border-white/10">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
 
           {/* Leadership & Squad */}
@@ -317,9 +317,9 @@ export default function SouthAfricaSeason2() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-[#E5E7EB] border-t-4 border-t-[#F5C440] shadow-lg p-10 md:p-14 h-full flex flex-col justify-center"
+            className="bg-[#093D2A] border-t-4 border-t-[#F5C440] shadow-lg p-10 md:p-14 h-full flex flex-col justify-center"
           >
-            <h2 className="text-3xl font-display font-black italic uppercase tracking-tight mb-10 text-[#0B4A34] pb-4 border-b border-slate-300">
+            <h2 className="text-3xl font-display font-black italic uppercase tracking-tight mb-10 text-white pb-4 border-b border-white/20">
               Leadership & Squad
             </h2>
 
@@ -328,10 +328,10 @@ export default function SouthAfricaSeason2() {
               <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start text-center sm:text-left mb-4">
                 <img src='https://res.cloudinary.com/dtsuewnbj/image/upload/v1776543201/abd_cz3nna.avif' alt="AB de Villiers" className="w-24 h-24 rounded-full object-cover border-4 border-[#F5C440] shadow-md shrink-0" />
                 <div>
-                  <div className="text-3xl md:text-4xl font-display font-black italic text-[#0B4A34] mb-2">
+                  <div className="text-3xl md:text-4xl font-display font-black italic text-white mb-2">
                     AB de Villiers
                   </div>
-                  <p className="text-[#0B4A34]/70 font-medium">
+                  <p className="text-white/70 font-medium">
                     A leader known for composure, innovation, and match-winning ability, guiding the team through a dominant and successful campaign.
                   </p>
                 </div>
@@ -342,13 +342,13 @@ export default function SouthAfricaSeason2() {
               <div className="text-sm font-bold uppercase tracking-widest text-[#F5C440] mb-4">Key Players</div>
               <div className="flex flex-wrap gap-4 mb-6">
                 {['AB de Villiers', 'Hashim Amla', 'JP Duminy', 'Imran Tahir'].map((p, i) => (
-                  <div key={i} className="flex items-center gap-3 pr-5 bg-[#FFFFFF] border border-slate-200 shadow-sm p-2 hover:border-[#F5C440] hover:bg-white transition-all">
+                  <div key={i} className="flex items-center gap-3 pr-5 bg-[#062B1E] border border-white/10 shadow-sm p-2 hover:border-[#F5C440] hover:bg-[#062B1E] transition-all">
                     <img src={dummyPlayerImg} alt={p} className="w-10 h-10 rounded-full object-cover" />
-                    <span className="text-sm md:text-base font-bold text-[#0B4A34]">{p}</span>
+                    <span className="text-sm md:text-base font-bold text-white">{p}</span>
                   </div>
                 ))}
               </div>
-              <p className="text-[#0B4A34]/80 font-bold italic">
+              <p className="text-white/80 font-bold italic">
                 A balanced lineup combining experience, skill, and the ability to perform in high-pressure situations.
               </p>
             </div>
@@ -360,7 +360,7 @@ export default function SouthAfricaSeason2() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-[#0B4A34] text-white border-b-4 border-b-[#F5C440] shadow-lg p-10 md:p-14 h-full flex flex-col justify-center"
+            className="bg-[#093D2A] text-white border-b-4 border-b-[#F5C440] shadow-lg p-10 md:p-14 h-full flex flex-col justify-center"
           >
             <h2 className="text-3xl font-display font-black italic uppercase tracking-tight mb-10 text-white pb-4 border-b border-[#F5C440]/20">
               Head Coach
@@ -396,8 +396,8 @@ export default function SouthAfricaSeason2() {
       </section>
 
       {/* 6. DEFINING THE SEASON & LEGACY */}
-      <section className="py-12 md:py-16 bg-[#FFFFFF] relative overflow-hidden">
-        <div className="absolute top-1/2 left-0 w-64 h-64 bg-[#E5E7EB] rounded-full blur-[80px] pointer-events-none transform -translate-y-1/2 -translate-x-1/2" />
+      <section className="py-12 md:py-16 bg-[#062B1E] relative overflow-hidden">
+        <div className="absolute top-1/2 left-0 w-64 h-64 bg-[#093D2A] rounded-full blur-[80px] pointer-events-none transform -translate-y-1/2 -translate-x-1/2" />
 
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 relative z-10">
           <motion.div
@@ -406,19 +406,19 @@ export default function SouthAfricaSeason2() {
             viewport={{ once: true }}
             variants={fadeUp}
           >
-            <h2 className="text-4xl md:text-5xl font-display font-black italic uppercase text-[#0B4A34] mb-6">
+            <h2 className="text-4xl md:text-5xl font-display font-black italic uppercase text-white mb-6">
               Defining The <span className="text-[#F5C440]">Season</span>
             </h2>
-            <p className="text-xl text-slate-500 font-medium mb-8">
+            <p className="text-xl text-white/70 font-medium mb-8">
               Season 2 was more than just a tournament—it was a statement.
             </p>
-            <p className="font-bold text-[#0B4A34] uppercase tracking-widest text-sm mb-4">It demonstrated:</p>
+            <p className="font-bold text-white uppercase tracking-widest text-sm mb-4">It demonstrated:</p>
             <ul className="space-y-4 mb-8">
-              <li className="p-4 bg-[#E5E7EB] border border-slate-200 shadow-sm font-bold text-[#0B4A34] flex gap-3"><Presentation className="text-[#F5C440] shrink-0" /> The strength of the Game Changers franchise model</li>
-              <li className="p-4 bg-[#E5E7EB] border border-slate-200 shadow-sm font-bold text-[#0B4A34] flex gap-3"><Globe2 className="text-[#F5C440] shrink-0" /> The global appeal of high-quality competitive sport</li>
-              <li className="p-4 bg-[#E5E7EB] border border-slate-200 shadow-sm font-bold text-[#0B4A34] flex gap-3"><Target className="text-[#F5C440] shrink-0" /> The impact of combining legendary talent with strong leadership</li>
+              <li className="p-4 bg-[#093D2A] border border-white/10 shadow-sm font-bold text-white flex gap-3"><Presentation className="text-[#F5C440] shrink-0" /> The strength of the Game Changers franchise model</li>
+              <li className="p-4 bg-[#093D2A] border border-white/10 shadow-sm font-bold text-white flex gap-3"><Globe2 className="text-[#F5C440] shrink-0" /> The global appeal of high-quality competitive sport</li>
+              <li className="p-4 bg-[#093D2A] border border-white/10 shadow-sm font-bold text-white flex gap-3"><Target className="text-[#F5C440] shrink-0" /> The impact of combining legendary talent with strong leadership</li>
             </ul>
-            <p className="text-lg text-[#0B4A34]/80 font-bold italic border-l-4 border-[#F5C440] pl-4">
+            <p className="text-lg text-white/80 font-bold italic border-l-4 border-[#F5C440] pl-4">
               It marked the transition from foundation to dominance.
             </p>
           </motion.div>
@@ -429,19 +429,19 @@ export default function SouthAfricaSeason2() {
             viewport={{ once: true }}
             variants={fadeUp}
           >
-            <h2 className="text-4xl md:text-5xl font-display font-black italic uppercase text-[#0B4A34] mb-6">
+            <h2 className="text-4xl md:text-5xl font-display font-black italic uppercase text-white mb-6">
               Legacy Of <span className="text-[#F5C440]">Season 2</span>
             </h2>
-            <p className="text-xl text-slate-500 font-medium mb-8">
+            <p className="text-xl text-white/70 font-medium mb-8">
               The championship victory not only defined the season but also elevated the stature of the entire ecosystem.
             </p>
-            <p className="font-bold text-[#0B4A34] uppercase tracking-widest text-sm mb-4">It reinforced:</p>
+            <p className="font-bold text-white uppercase tracking-widest text-sm mb-4">It reinforced:</p>
             <ul className="space-y-4 mb-8">
-              <li className="p-4 bg-white border-2 border-[#F5C440]/30 shadow-md font-bold text-[#0B4A34] flex gap-3"><Star className="text-[#F5C440] shrink-0" /> Credibility on the global stage</li>
-              <li className="p-4 bg-white border-2 border-[#F5C440]/30 shadow-md font-bold text-[#0B4A34] flex gap-3"><Trophy className="text-[#F5C440] shrink-0" /> The ability to compete and win at the highest level</li>
-              <li className="p-4 bg-white border-2 border-[#F5C440]/30 shadow-md font-bold text-[#0B4A34] flex gap-3"><Zap className="text-[#F5C440] shrink-0" /> A growing connection with fans across markets</li>
+              <li className="p-4 bg-[#062B1E] border-2 border-[#F5C440]/30 shadow-md font-bold text-white flex gap-3"><Star className="text-[#F5C440] shrink-0" /> Credibility on the global stage</li>
+              <li className="p-4 bg-[#062B1E] border-2 border-[#F5C440]/30 shadow-md font-bold text-white flex gap-3"><Trophy className="text-[#F5C440] shrink-0" /> The ability to compete and win at the highest level</li>
+              <li className="p-4 bg-[#062B1E] border-2 border-[#F5C440]/30 shadow-md font-bold text-white flex gap-3"><Zap className="text-[#F5C440] shrink-0" /> A growing connection with fans across markets</li>
             </ul>
-            <p className="text-lg text-[#0B4A34]/80 font-bold italic bg-[#F5C440]/10 p-4 border border-[#F5C440]/20">
+            <p className="text-lg text-white/80 font-bold italic bg-[#F5C440]/10 p-4 border border-[#F5C440]/20">
               Season 2 set a new benchmark—one that future seasons will aim to surpass.
             </p>
           </motion.div>
@@ -449,7 +449,7 @@ export default function SouthAfricaSeason2() {
       </section>
 
       {/* GALLERY SECTION (Bento Grid) */}
-      <section id="media" className="py-24 md:py-32 bg-[#E5E7EB] relative z-10 border-t border-slate-200">
+      <section id="media" className="py-24 md:py-32 bg-[#093D2A] relative z-10 border-t border-white/10">
         <div className="max-w-[1800px] mx-auto px-6 md:px-12 mb-16 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -461,11 +461,11 @@ export default function SouthAfricaSeason2() {
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-2 h-2 bg-[#F5C440] rotate-45" />
-                <span className="text-[#0B4A34]/60 font-bold uppercase tracking-[0.25em] text-xs">
+                <span className="text-white/60 font-bold uppercase tracking-[0.25em] text-xs">
                   Championship Glory
                 </span>
               </div>
-              <h2 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold italic uppercase text-[#0B4A34] tracking-tighter leading-none">
+              <h2 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold italic uppercase text-white tracking-tighter leading-none">
                 Season 2 <span className="text-[#F5C440]">Gallery</span>
               </h2>
             </div>
@@ -486,14 +486,14 @@ export default function SouthAfricaSeason2() {
                 key={i}
                 variants={itemVariants}
                 onClick={() => setSelectedImage(img.src)}
-                className={`relative w-full h-full overflow-hidden group cursor-zoom-in bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow ${img.gridClasses}`}
+                className={`relative w-full h-full overflow-hidden group cursor-zoom-in bg-[#062B1E] border border-white/10 shadow-sm hover:shadow-md transition-shadow ${img.gridClasses}`}
               >
                 <img
                   src={img.src}
                   alt={`SA Season 2 Gallery ${i + 1}`}
                   className="w-full h-full object-cover transition-transform duration-[800ms] ease-out group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-[#0B4A34]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </motion.div>
             ))}
           </motion.div>
@@ -508,11 +508,11 @@ export default function SouthAfricaSeason2() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setSelectedImage(null)}
-            className="fixed inset-0 z-[100] flex items-center justify-center bg-[#0B4A34]/95 backdrop-blur-xl p-4 md:p-12 cursor-zoom-out"
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-[#093D2A]/95 backdrop-blur-xl p-4 md:p-12 cursor-zoom-out"
           >
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-6 right-6 text-white/50 hover:text-[#F5C440] transition-colors bg-white/5 p-3 rounded-none hover:bg-white/10 z-[101]"
+              className="absolute top-6 right-6 text-white/50 hover:text-[#F5C440] transition-colors bg-white/5 p-3 rounded-none hover:bg-[#062B1E]/10 z-[101]"
             >
               <X size={24} />
             </button>
@@ -535,7 +535,7 @@ export default function SouthAfricaSeason2() {
       </AnimatePresence>
 
       {/* 7. CLOSING STATEMENT */}
-      <section className="py-12 md:py-16 bg-[#0B4A34] relative text-center border-t-8 border-[#F5C440] overflow-hidden">
+      <section className="py-12 md:py-16 bg-[#093D2A] relative text-center border-t-8 border-[#F5C440] overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 pointer-events-none" />
         <div className="absolute bottom-0 left-1/2 w-[80vw] h-[50vh] bg-[#F5C440]/20 rounded-[100%] blur-[120px] pointer-events-none transform -translate-x-1/2 translate-y-1/2" />
 
@@ -554,7 +554,7 @@ export default function SouthAfricaSeason2() {
               A moment where vision translated into victory—and excellence became legacy.
             </p>
             <div className="mt-12 flex justify-center">
-              <Link to="/teams/south-africa-champions" className="px-8 py-4 bg-[#F5C440] text-[#0B4A34] text-sm font-bold tracking-widest uppercase hover:bg-white transition-colors shadow-md border-2 border-transparent hover:border-[#F5C440]">
+              <Link to="/teams/south-africa-champions" className="px-8 py-4 bg-[#F5C440] text-[#062B1E] text-sm font-bold tracking-widest uppercase hover:bg-[#062B1E] hover:text-[#F5C440] transition-colors shadow-md border-2 border-transparent hover:border-[#F5C440]">
                 Back to Team Overview
               </Link>
             </div>
