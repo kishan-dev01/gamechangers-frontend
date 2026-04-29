@@ -131,9 +131,9 @@ export default function SouthAfricaChampions() {
             <div className="w-56 h-56 sm:w-72 sm:h-72 lg:w-[400px] lg:h-[400px] bg-[#093D2A]/40 backdrop-blur-md rounded-full flex items-center justify-center border-[4px] lg:border-[8px] border-[#F5C440] shadow-[0_0_60px_rgba(245,196,64,0.15)] p-6 lg:p-10 relative overflow-hidden group">
               <div className="absolute inset-0 bg-gradient-to-tr from-[#0B4A34]/80 to-transparent"></div>
               <img
-                src="/logo.png"
+                src="/sac-logo.png"
                 alt="SA Champions Logo"
-                className="w-full h-full object-contain drop-shadow-2xl relative z-10 group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-full object-contain drop-shadow-2xl relative z-10 group-hover:scale-105 transition-transform duration-700 mt-10"
               />
             </div>
           </motion.div>

@@ -22,12 +22,12 @@ export default function Falcons() {
   };
 
   const galleryImages = [
-    'https://res.cloudinary.com/dtsuewnbj/image/upload/v1776853549/542233997_17889580725346402_1821248596687153690_n_akuxhi.webp',
-    'https://res.cloudinary.com/dtsuewnbj/image/upload/v1776853548/479487125_17919671682046341_6248640717153713569_n_k7wxxq.jpg',
-    'https://res.cloudinary.com/dtsuewnbj/image/upload/v1776853548/624449744_18080235455018392_4255132193738986441_n_uguc2z.jpg',
-    'https://res.cloudinary.com/dtsuewnbj/image/upload/v1776853548/655184086_18114975877594529_335421138537515396_n_v0mpzw.jpg',
-    'https://res.cloudinary.com/dtsuewnbj/image/upload/v1776853548/663142645_18015797615828428_4442459797909036396_n_eegv0c.jpg',
-    'https://res.cloudinary.com/dtsuewnbj/image/upload/v1776853548/624449744_18080235455018392_4255132193738986441_n_uguc2z.jpg',
+    "https://res.cloudinary.com/dtsuewnbj/image/upload/v1777489851/WTL00745_rcrmho.jpg",
+    "https://res.cloudinary.com/dtsuewnbj/image/upload/v1777489848/WTL00595_rswdju.jpg",
+    "https://res.cloudinary.com/dtsuewnbj/image/upload/v1777489847/WTL00728_stu9f1.jpg",
+    "https://res.cloudinary.com/dtsuewnbj/image/upload/v1777489845/WTL00864_i3iojb.jpg",
+    "https://res.cloudinary.com/dtsuewnbj/image/upload/v1777489845/WTL00918_gpcosx.jpg",
+    "https://res.cloudinary.com/dtsuewnbj/image/upload/v1777489844/WTL00402_jnc84z.jpg"
   ];
 
   return (
@@ -266,7 +266,7 @@ export default function Falcons() {
 
       {/* 4. GALLERY SECTION */}
       <section className="py-12 md:py-16 bg-[#720b0b] relative">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+        <div className="max-w-[1500px] mx-auto px-6 md:px-12">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -283,7 +283,7 @@ export default function Falcons() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
-            className="grid grid-cols-2 md:grid-cols-3 gap-4"
+            className="grid grid-cols-2 md:grid-cols-3 gap-2"
           >
             {galleryImages.map((src, idx) => (
               <motion.div

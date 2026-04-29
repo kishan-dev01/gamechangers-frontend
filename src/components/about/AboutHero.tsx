@@ -10,7 +10,7 @@ export default function AboutHero() {
       </div>
 
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-        
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -24,7 +24,7 @@ export default function AboutHero() {
             The Future of <br />
             <span className="text-brand-slate">Sports IP</span>
           </h1>
-          
+
           <div className="space-y-6">
             <p className="text-lg md:text-xl text-brand-midnight/80 font-medium leading-relaxed">
               Game Changers Sporting Network is a fast-growing sports and entertainment platform focused on building scalable, high-value global sports intellectual properties across cricket, tennis, and padel.
@@ -42,21 +42,21 @@ export default function AboutHero() {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           className="relative h-[400px] md:h-[500px] w-full"
         >
-          {/* Main Image */ }
+          {/* Main Image */}
           <div className="absolute inset-0 bg-brand-kinetic border border-brand-slate/10 shadow-lg overflow-hidden">
-             <img 
-               src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=2069&auto=format&fit=crop" 
-               alt="Sports Stadium" 
-               className="w-full h-full object-cover opacity-90 mix-blend-multiply"
-             />
+            <img
+              src="/about.jpg"
+              alt="Sports Stadium"
+              className="w-full h-full object-cover opacity-90 mix-blend-multiply"
+            />
           </div>
           {/* Accent decoration */}
-          <div className="absolute -bottom-6 -left-6 w-48 h-48 bg-brand-midnight border border-brand-slate/20 shadow-xl overflow-hidden flex items-center justify-center p-6">
-             <div className="text-center">
-                <span className="block text-4xl font-display font-black italic uppercase text-brand-gold">$600B+</span>
-                <span className="block text-xs font-bold uppercase tracking-widest text-white mt-2">Global Market</span>
-             </div>
-          </div>
+          {/* <div className="absolute -bottom-6 -left-6 w-48 h-48 bg-brand-midnight border border-brand-slate/20 shadow-xl overflow-hidden flex items-center justify-center p-6">
+            <div className="text-center">
+              <span className="block text-4xl font-display font-black italic uppercase text-brand-gold">$600B+</span>
+              <span className="block text-xs font-bold uppercase tracking-widest text-white mt-2">Global Market</span>
+            </div>
+          </div> */}
         </motion.div>
 
       </div>
