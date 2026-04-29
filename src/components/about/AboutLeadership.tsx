@@ -29,7 +29,7 @@ export default function AboutLeadership() {
             <div className="relative h-full min-h-[500px] lg:min-h-full border border-brand-slate/10 bg-brand-kinetic shadow-xl overflow-hidden p-4">
               <div className="w-full h-full overflow-hidden border border-brand-slate/10 relative">
                 <img
-                  src="https://plus.unsplash.com/premium_photo-1682096630303-83ea15caadca?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  src="https://res.cloudinary.com/dtsuewnbj/image/upload/v1777413320/amandeep-singh_i5zddc.png"
                   alt="Amandeep Singh"
                   className="w-full h-full object-cover opacity-90 transition-all duration-700 hover:scale-105"
                 />

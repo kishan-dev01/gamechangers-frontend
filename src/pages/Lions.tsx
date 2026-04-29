@@ -33,31 +33,31 @@ export default function Lions() {
   // Bento gallery array
   const galleryImages = [
     {
-      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1776879452/533454429_17879762478379767_6832909437359134307_n_ajztpi.jpg",
+      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1777413912/IYM04788_xzngyq.jpg",
       gridClasses: "col-span-1 md:col-span-8 row-span-1 md:row-span-2",
     },
     {
-      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1776879452/lions-1_patfkg.webp",
+      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1777413899/IYM04170_hj2av7.jpg",
       gridClasses: "col-span-1 md:col-span-4 row-span-1 md:row-span-1",
     },
     {
-      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1776879452/534572407_17879762517379767_2382216194756587180_n_ucabky.jpg",
+      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1777413599/IYM04788_nnlvdb.jpg",
       gridClasses: "col-span-1 md:col-span-4 row-span-1 md:row-span-1",
     },
     {
-      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1776879452/535273202_17879762469379767_15045260084654848_n_fzyhqr.jpg",
+      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1777413598/_39I0358_avkidf.jpg",
       gridClasses: "col-span-1 md:col-span-4 row-span-1 md:row-span-2",
     },
     {
-      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1776879451/534718917_17879762499379767_2225543511613900230_n_cfmkqq.jpg",
+      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1777413595/_39I0275_eaxzjm.jpg",
       gridClasses: "col-span-1 md:col-span-4 row-span-1 md:row-span-1",
     },
     {
-      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1776879659/532661922_17879518116379767_8096867367921986896_n_knrwgp.webp",
+      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1777413593/_39I0244_bq2eud.jpg",
       gridClasses: "col-span-1 md:col-span-4 row-span-1 md:row-span-1",
     },
     {
-      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1776879658/533570858_17973075662918092_8604347250734056872_n_efefof.jpg",
+      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1777413993/SMP_WPL082_drhwdm.jpg",
       gridClasses: "col-span-1 md:col-span-8 row-span-1 md:row-span-1",
     },
   ];
@@ -296,8 +296,10 @@ export default function Lions() {
                 className={`relative w-full h-full overflow-hidden group cursor-zoom-in bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow ${img.gridClasses}`}
               >
                 <img
-                  src={img.src}
+                  src={img.src.replace("/upload/", "/upload/f_auto,q_auto,w_800,c_limit/")}
                   alt={`Lions Gallery ${i + 1}`}
+                  loading='lazy'
+                  decoding='async'
                   className="w-full h-full object-cover transition-transform duration-[800ms] ease-out group-hover:scale-105"
                 />
                 {/* Subtle overlay on hover for visual feedback without text */}

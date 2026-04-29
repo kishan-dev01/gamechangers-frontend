@@ -197,9 +197,9 @@ export default function AboutUs() {
               <div className="absolute inset-0 bg-white border border-brand-slate/10 shadow-xl p-3 md:p-5 lg:p-6 z-10 transition-transform duration-500 hover:scale-[1.02]">
                 <div className="w-full h-full relative overflow-hidden bg-brand-kinetic border border-brand-slate/5">
                   <img
-                    src="https://plus.unsplash.com/premium_photo-1682096630303-83ea15caadca?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src="https://res.cloudinary.com/dtsuewnbj/image/upload/v1777413320/amandeep-singh_i5zddc.png"
                     alt="Amandeep Singh"
-                    className="w-full h-full object-cover object-center hover:grayscale-0 transition-all duration-700"
+                    className="w-full h-full object-contain object-center hover:grayscale-0 transition-all duration-700"
                   />
                 </div>
               </div>
