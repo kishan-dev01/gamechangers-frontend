@@ -11,11 +11,18 @@ const slides = [
     subtitle: 'South Africa Champions dominating the global stage.',
     sport: 'Cricket'
   },
-
+  {
+    id: 'golf',
+    type: 'image',
+    src: 'https://res.cloudinary.com/dtsuewnbj/image/upload/v1777486324/changer_d4x0rx.png',
+    title: 'Precision & Prestige',
+    subtitle: 'Co-founders of the elite Stars Golf League.',
+    sport: 'Golf'
+  },
   {
     id: 'tennis',
     type: 'image',
-    src: 'https://res.cloudinary.com/dtsuewnbj/image/upload/v1777486324/changer_d4x0rx.png',
+    src: 'https://res.cloudinary.com/dtsuewnbj/image/upload/v1777486326/family_srbyfj.png',
     title: 'Master The Court',
     subtitle: 'Game Changers Falcons in the World Tennis League.',
     sport: 'Tennis'
@@ -23,19 +30,11 @@ const slides = [
   {
     id: 'padel',
     type: 'image',
-    src: 'https://res.cloudinary.com/dtsuewnbj/image/upload/v1777486326/family_srbyfj.png',
+    src: 'https://res.cloudinary.com/dtsuewnbj/image/upload/v1777486323/game_ajmfsj.png',
     title: 'The Next Evolution',
     subtitle: 'Building high-value sports IPs in Padel.',
     sport: 'Padel'
-  }
-  // {
-  //   id: 'golf',
-  //   type: 'image',
-  //   src: 'https://res.cloudinary.com/dtsuewnbj/image/upload/v1777486324/changer_d4x0rx.png',
-  //   title: 'Precision & Prestige',
-  //   subtitle: 'Co-founders of the elite Stars Golf League.',
-  //   sport: 'Golf'
-  // },
+  },
 ];
 
 export default function Hero() {
@@ -60,8 +59,8 @@ export default function Hero() {
         <AnimatePresence>
           <motion.div
             key={current}
-            initial={{ opacity: 0, scale: 1.05 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1.5, ease: 'easeInOut' }}
             className="absolute inset-0"
@@ -72,35 +71,19 @@ export default function Hero() {
                 loop
                 muted
                 playsInline
-                className="w-full h-full object-cover opacity-90"
+                className="w-full h-full object-cover opacity-70"
                 src={slides[current].src}
               />
             ) : (
               <img
                 src={slides[current].src}
                 alt={slides[current].sport}
-                className="w-full h-full object-cover opacity-90"
+                className="w-full h-full object-cover opacity-60"
               />
             )}
+
           </motion.div>
         </AnimatePresence>
-      </div>
-
-      {/* 
-        STRATEGIC OVERLAYS FOR VISIBILITY 
-        1. Top gradient ensures the transparent navbar is always readable
-        2. Left gradient ensures the hero text content is always readable
-        3. Subtle overall blur/darkening to make vibrant colors pop
-      */}
-      <div className="absolute inset-0 z-[5] pointer-events-none">
-        {/* Top Overlay for Navbar */}
-        <div className="absolute top-0 inset-x-0 h-48 bg-gradient-to-b from-brand-kinetic/95 via-brand-kinetic/40 to-transparent" />
-
-        {/* Left Overlay for Content */}
-        <div className="absolute inset-0 w-full md:w-[75%] bg-gradient-to-r from-brand-kinetic/80 via-brand-kinetic/30 to-transparent" />
-
-        {/* Subtle texture overlay */}
-        <div className="absolute inset-0 bg-brand-kinetic/5 backdrop-blur-[1px]" />
       </div>
 
       {/* Hero Content */}
@@ -108,47 +91,42 @@ export default function Hero() {
         <AnimatePresence mode="wait">
           <motion.div
             key={current}
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -30 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="max-w-3xl"
           >
-            <div className="inline-flex items-center gap-3 mb-4">
-              <span className="w-8 h-[2px] bg-brand-neon"></span>
-              <span className="text-brand-neon font-bold uppercase tracking-[0.2em] text-sm block drop-shadow-sm">
-                {slides[current].sport}
-              </span>
-            </div>
-
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold italic tracking-[0.1em] uppercase leading-[0.9] text-brand-midnight mb-6 drop-shadow-sm">
+            <span className="text-brand-neon font-bold uppercase tracking-[0.2em] text-sm mb-4 block">
+              {slides[current].sport}
+            </span>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold italic tracking-[0.1em] uppercase leading-[0.9] text-brand-midnight mb-6">
               {slides[current].title}
             </h1>
-
-            <p className="text-lg md:text-2xl font-medium text-brand-midnight/90 mb-10 max-w-2xl leading-relaxed drop-shadow-sm">
+            <p className="text-lg md:text-2xl font-medium text-brand-midnight/80 mb-10 max-w-2xl leading-relaxed">
               {slides[current].subtitle}
             </p>
 
             <a
               href="#portfolio"
-              className="group inline-flex items-center gap-4 px-8 py-4 bg-brand-gold text-brand-midnight font-display font-bold italic uppercase tracking-widest hover:bg-brand-neon hover:neon-hover-glow transition-all duration-300 shadow-lg hover:shadow-brand-neon/30"
+              className="inline-flex items-center gap-4 px-8 py-4 bg-brand-gold text-brand-midnight font-display font-bold italic uppercase tracking-widest hover:bg-brand-neon hover:neon-hover-glow transition-all duration-300"
             >
               <span>Explore Legacy</span>
-              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform duration-300" />
+              <ArrowRight size={20} />
             </a>
           </motion.div>
         </AnimatePresence>
       </div>
 
       {/* Manual Slide Controls */}
-      <div className="absolute bottom-10 left-6 md:left-12 z-20 flex gap-3 items-center">
+      <div className="absolute bottom-10 left-6 md:left-12 z-20 flex gap-3">
         {slides.map((_, idx) => (
           <button
             key={idx}
             onClick={() => handleDotClick(idx)}
-            className={`h-2 transition-all duration-500 rounded-full ${current === idx
-              ? 'w-16 bg-brand-neon neon-glow'
-              : 'w-6 bg-brand-midnight/40 hover:bg-brand-midnight/70'
+            className={`h-1.5 transition-all duration-500 rounded-full ${current === idx
+              ? 'w-12 bg-brand-neon neon-glow'
+              : 'w-4 bg-brand-midnight/30 hover:bg-brand-midnight/60'
               }`}
             aria-label={`Go to slide ${idx + 1}`}
           />

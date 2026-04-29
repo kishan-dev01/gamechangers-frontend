@@ -41,31 +41,31 @@ export default function SouthAfricaChampions() {
   // Gallery images (Bento Grid layout)
   const galleryImages = [
     {
-      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1776165411/WTL00342_akxqxb.jpg", // Placeholder cricket/sports image
+      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1777487925/DSC06574_emgiyo.jpg",
       gridClasses: "col-span-1 md:col-span-8 row-span-1 md:row-span-2",
     },
     {
-      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1776165411/WTL00342_akxqxb.jpg",
+      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1777487925/DAR_9533_gs90au.jpg",
       gridClasses: "col-span-1 md:col-span-4 row-span-1 md:row-span-1",
     },
     {
-      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1776165411/WTL00342_akxqxb.jpg",
+      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1777487917/DSC06787_yblrv5.jpg",
       gridClasses: "col-span-1 md:col-span-4 row-span-1 md:row-span-1",
     },
     {
-      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1776165411/WTL00342_akxqxb.jpg",
+      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1777487915/DSC06707_yvsps0.jpg",
       gridClasses: "col-span-1 md:col-span-4 row-span-1 md:row-span-2",
     },
     {
-      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1776165411/WTL00342_akxqxb.jpg",
+      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1777487915/DAR_9391_sufmzz.jpg",
       gridClasses: "col-span-1 md:col-span-4 row-span-1 md:row-span-1",
     },
     {
-      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1776165411/WTL00342_akxqxb.jpg",
+      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1777487915/DSC06698_ltextc.jpg",
       gridClasses: "col-span-1 md:col-span-4 row-span-1 md:row-span-1",
     },
     {
-      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1776165411/WTL00342_akxqxb.jpg",
+      src: "https://res.cloudinary.com/dtsuewnbj/image/upload/v1777487912/DSC06696_ge4zcm.jpg",
       gridClasses: "col-span-1 md:col-span-8 row-span-1 md:row-span-1",
     },
   ];
@@ -551,7 +551,7 @@ export default function SouthAfricaChampions() {
                   className={`relative w-full h-full overflow-hidden group cursor-zoom-in bg-[#062B1E] border border-white/10 shadow-sm hover:shadow-md transition-shadow ${img.gridClasses}`}
                 >
                   <img
-                    src={img.src}
+                    src={img.src.replace("/upload/", "/upload/f_auto,q_auto,w_800,c_limit/")}
                     alt={`South Africa Champions Gallery ${i + 1}`}
                     className="w-full h-full object-cover transition-transform duration-[800ms] ease-out group-hover:scale-105"
                   />

@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { motion, useScroll, useTransform, MotionValue } from 'framer-motion';
+import { motion, useScroll, useTransform, MotionValue, useInView } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 
 const statsData = [
@@ -9,6 +9,7 @@ const statsData = [
     location: 'Multi-Sport | Global Presence',
     description: 'Building a high-value portfolio of global sports franchises across cricket, tennis, and emerging formats. From the World Tennis League to the World Championship of Legends, Game Changers is establishing a strong international footprint with scalable and commercially powerful teams.',
     img: 'https://plus.unsplash.com/premium_photo-1768349851778-87f91a6f05ae?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    video: 'https://res.cloudinary.com/dtsuewnbj/video/upload/v1777484764/Proud_to_be_the_co-founders_of_the_Stars_Golf_League.Mark_your_calendars_25th_28th_March_2026._uznbcb.mp4',
     link: '#portfolio',
     cta: 'Explore Network'
   },
@@ -18,6 +19,7 @@ const statsData = [
     location: 'Elite Performance | Winning Culture',
     description: 'Delivering proven success on the global stage with championship-winning teams, including Game Changers Falcons (World Tennis League) and South Africa Champions (World Championship of Legends 2025). Built on consistency, leadership, and world-class talent.',
     img: 'https://images.unsplash.com/photo-1591491640784-3232eb748d4b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    video: 'https://res.cloudinary.com/dtsuewnbj/video/upload/v1777484760/Game_Changers_in_Motion_gamechangersfzco_southafricachampions_gamechangerslions_gamechange_tczi7n.mp4',
     link: '#about',
     cta: 'View Achievements'
   },
@@ -27,6 +29,7 @@ const statsData = [
     location: 'Media • Fans • Commercial',
     description: 'Creating a fully integrated ecosystem at the intersection of sport, entertainment, and fan engagement—unlocking revenue across media rights, sponsorships, licensing, and live experiences for a global audience.',
     img: 'https://images.unsplash.com/photo-1563299796-b729d0af54a5?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    video: 'https://res.cloudinary.com/dtsuewnbj/video/upload/v1777484760/Just_the_pure_sounds_of_tennis_gamechangersfzco_gamechangersfalcons_worldtennisleague_cigfiu.mp4',
     link: '#gallery',
     cta: 'Discover Ecosystem'
   }
@@ -42,6 +45,7 @@ interface CardProps {
 
 const Card = ({ card, i, progress, range, targetScale }: CardProps) => {
   const containerRef = useRef(null);
+  const isInView = useInView(containerRef, { margin: "200px", once: true });
 
   // Track this specific card's parallax scale for its image
   const { scrollYProgress } = useScroll({
@@ -96,7 +100,23 @@ const Card = ({ card, i, progress, range, targetScale }: CardProps) => {
           >
             {/* Subtle Overlay to make it feel integrated */}
             <div className="absolute inset-0 bg-brand-midnight/5 mix-blend-overlay z-10 transition-opacity duration-1000 group-hover:opacity-0 pointer-events-none" />
-            <img src={card.img} alt={card.title} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 relative z-0" />
+            {isInView ? (
+              <video 
+                src={card.video} 
+                poster={card.img}
+                autoPlay 
+                muted 
+                loop 
+                playsInline 
+                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 relative z-0" 
+              />
+            ) : (
+              <img 
+                src={card.img} 
+                alt={card.title} 
+                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 relative z-0" 
+              />
+            )}
           </motion.div>
         </div>
 
